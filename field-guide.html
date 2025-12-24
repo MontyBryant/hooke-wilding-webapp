@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Living Dorset Field Guide — Hooke Farm Wilding Portal</title>
+    <meta
+      name="description"
+      content="An offline catalogue of Dorset habitats and representative species — a living field guide you can extend over time."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="topbar__inner">
+        <div class="brand">
+          <div class="brand__kicker">Hooke Farm</div>
+          <div class="brand__title">Wilding Portal</div>
+        </div>
+        <div class="topbar__actions">
+          <a class="btn btn--ghost" href="./index.html">Back to map</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="layout" style="grid-template-columns: 340px 1fr; grid-template-areas: 'sidebar content';">
+      <aside class="sidebar" aria-label="Field guide filters">
+        <div class="panel">
+          <div class="fg-title">Living Dorset Field Guide</div>
+          <div class="panel__meta fg-intro">
+            A browsable catalogue of habitats and species. Think of this as a “living catalogue” for Dorset — a place to
+            collect habitats first, then species as characters that depend on those places.
+          </div>
+
+          <div class="divider"></div>
+
+          <label class="field">
+            <span class="field__label">Search</span>
+            <input id="fgSearch" class="input" type="search" placeholder="e.g. heath, orchid, bat, dragonfly…" />
+          </label>
+
+          <div class="divider"></div>
+
+          <div class="panel__subtitle">Group</div>
+          <div class="taglist" id="fgGroups" role="list"></div>
+
+          <div class="divider"></div>
+
+          <div class="panel__subtitle">Habitat</div>
+          <div class="taglist" id="fgHabitats" role="list"></div>
+
+          <div class="divider"></div>
+
+          <div class="panel__subtitle">Season</div>
+          <div class="taglist" id="fgSeasons" role="list"></div>
+
+          <div class="divider"></div>
+
+          <button class="btn btn--ghost btn--small" id="fgClear" type="button">Clear filters</button>
+          <div class="panel__meta" id="fgMeta"></div>
+        </div>
+      </aside>
+
+      <section class="content" aria-label="Catalogue">
+        <div class="fg-grid" id="fgGrid" aria-live="polite"></div>
+
+      </section>
+    </main>
+
+    <dialog class="modal" id="speciesModal">
+      <div class="modal__header">
+        <div class="fg-modal__header">
+          <div class="modal__title" id="speciesModalTitle"></div>
+          <div class="fg-modal__headtags" id="speciesModalHeadTags" aria-label="Species tags"></div>
+        </div>
+        <button class="btn btn--ghost" id="speciesModalClose" type="button">Close</button>
+      </div>
+      <div class="modal__body">
+        <div class="fg-modal__imgwrap">
+          <img class="fg-modal__img" id="speciesModalImg" alt="" />
+          <div class="caption muted fg-modal__credit" id="speciesModalCredit"></div>
+        </div>
+        <div class="fg-modal__meta" id="speciesModalMeta" hidden></div>
+        <div class="fg-modal__note" id="speciesModalNote"></div>
+
+        <div class="divider"></div>
+
+        <div class="fg-modal__grid">
+          <div class="fg-modal__card">
+            <div class="fg-modal__label">Habitats</div>
+            <div class="fg-modal__value" id="speciesModalHabitats"></div>
+          </div>
+          <div class="fg-modal__card">
+            <div class="fg-modal__label">Watch for</div>
+            <div class="fg-modal__value" id="speciesModalWatchFor"></div>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="fg-modal__card">
+          <div class="fg-modal__label">Seasonal notes</div>
+          <div class="fg-modal__seasons" id="speciesModalSeasons"></div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="fg-modal__card">
+          <div class="fg-modal__label">Conservation status (UK/GB)</div>
+          <div class="fg-modal__value" id="speciesModalConservation"></div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="fg-modal__card">
+          <div class="fg-modal__label">Sources &amp; further reading</div>
+          <div class="fg-modal__value" id="speciesModalSources"></div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="fg-modal__card">
+          <div class="fg-modal__label">More details (placeholders)</div>
+          <div class="prose">
+            <p class="muted"><strong>ID tips:</strong> key features to look for, common confusion species.</p>
+            <p class="muted"><strong>Lookalikes:</strong> what it’s commonly mistaken for, and how to tell.</p>
+            <p class="muted"><strong>Where in Dorset:</strong> typical landscapes, reserves, and micro-habitats.</p>
+            <p class="muted"><strong>Conservation:</strong> UK protection/status, main pressures, what helps.</p>
+            <p class="muted"><strong>Responsible watching:</strong> how to observe without disturbing.</p>
+            <p class="muted"><strong>Recording:</strong> how/where to log sightings (local records centre / iRecord).</p>
+          </div>
+        </div>
+      </div>
+    </dialog>
+
+    <script src="./data/dorset-field-guide.js"></script>
+    <script src="./field-guide.js"></script>
+  </body>
+</html>
+
+

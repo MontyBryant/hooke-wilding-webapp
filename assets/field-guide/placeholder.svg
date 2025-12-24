@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750">
+  <defs>
+    <linearGradient id="paper" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f7f1e4"/>
+      <stop offset="1" stop-color="#f3ead9"/>
+    </linearGradient>
+    <radialGradient id="wash1" cx="20%" cy="15%" r="65%">
+      <stop offset="0" stop-color="rgba(173,217,197,.65)"/>
+      <stop offset="1" stop-color="rgba(173,217,197,0)"/>
+    </radialGradient>
+    <radialGradient id="wash2" cx="82%" cy="12%" r="60%">
+      <stop offset="0" stop-color="rgba(255,210,140,.55)"/>
+      <stop offset="1" stop-color="rgba(255,210,140,0)"/>
+    </radialGradient>
+    <radialGradient id="wash3" cx="70%" cy="70%" r="60%">
+      <stop offset="0" stop-color="rgba(192,107,59,.22)"/>
+      <stop offset="1" stop-color="rgba(192,107,59,0)"/>
+    </radialGradient>
+    <filter id="soft" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="0.9"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="750" fill="url(#paper)"/>
+  <rect width="1200" height="750" fill="url(#wash1)" filter="url(#soft)"/>
+  <rect width="1200" height="750" fill="url(#wash2)" filter="url(#soft)"/>
+  <rect width="1200" height="750" fill="url(#wash3)" filter="url(#soft)"/>
+
+  <g opacity="0.9">
+    <path d="M140 610 C 260 560, 360 660, 480 610 S 700 560, 820 610 S 980 660, 1060 610"
+          fill="none" stroke="rgba(32,52,44,.22)" stroke-width="6" stroke-linecap="round"/>
+    <path d="M140 610 C 260 585, 360 635, 480 610 S 700 585, 820 610 S 980 635, 1060 610"
+          fill="none" stroke="rgba(32,52,44,.10)" stroke-width="10" stroke-linecap="round"/>
+  </g>
+
+  <g font-family="ui-serif, Georgia, Times, serif" fill="rgba(32,52,44,.78)" text-anchor="middle">
+    <text x="600" y="330" font-size="44" letter-spacing="1">Cover photo missing</text>
+    <text x="600" y="382" font-size="22" fill="rgba(32,52,44,.55)">Add an image to assets/field-guide/</text>
+    <text x="600" y="412" font-size="18" fill="rgba(32,52,44,.45)">named like: dartford-warbler.jpg</text>
+  </g>
+</svg>
+
+

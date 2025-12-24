@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About — Hooke Farm Wilding Portal</title>
+    <meta name="description" content="About Hooke Farm Wilding and the Wilding Portal webapp." />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="topbar__inner">
+        <div class="brand">
+          <div class="brand__kicker">Hooke Farm</div>
+          <div class="brand__title">Wilding Portal</div>
+        </div>
+        <div class="topbar__actions">
+          <a class="btn btn--ghost" href="./index.html">Back to map</a>
+          <a class="btn btn--ghost" href="./field-guide.html">Living Dorset Field Guide</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="layout" style="grid-template-columns: 1fr; grid-template-areas: 'content';">
+      <section class="content" aria-label="About">
+        <div class="about">
+          <section class="about__section">
+            <div class="about__title">About Hooke Farm Wilding</div>
+            <div class="prose">
+              <p>
+                Hooke Farm is a place where the “tidy” line gets softened on purpose—so insects, birds, mammals, fungi,
+                and wildflowers can get on with the real work of making a landscape sing.
+              </p>
+              <p>
+                Wilding here isn’t about abandonment—it’s about <strong>attention</strong>. Making space for shelter,
+                food, and complexity, then letting the land do what it does best: knit together life in layers.
+              </p>
+              <p class="muted">
+                This page is a living draft. Add your own stories, observations, and photographs over time.
+              </p>
+            </div>
+
+            <div class="about__gallery" aria-label="Hooke Farm photos">
+              <figure class="about__figure">
+                <img
+                  class="about__img"
+                  src="./assets/about/hooke-farm-1.jpg"
+                  alt="Hooke Farm view"
+                  loading="lazy"
+                  onerror="this.closest('figure').style.display='none'"
+                />
+                <figcaption class="about__cap">A glimpse of Hooke Farm in summer.</figcaption>
+              </figure>
+              <figure class="about__figure">
+                <img
+                  class="about__img"
+                  src="./assets/about/hooke-farm-2.jpg"
+                  alt="Hooke Farm buildings and meadow"
+                  loading="lazy"
+                  onerror="this.closest('figure').style.display='none'"
+                />
+                <figcaption class="about__cap">Wildflower edges, big skies, and the working heart of the place.</figcaption>
+              </figure>
+            </div>
+
+            <div class="caption muted">
+              To show your two photos here, place them in <code>assets/about/</code> as
+              <code>hooke-farm-1.jpg</code> and <code>hooke-farm-2.jpg</code>.
+            </div>
+          </section>
+
+          <section class="about__section">
+            <div class="about__title">About this app</div>
+            <div class="prose">
+              <p>
+                The Wilding Portal is an offline webapp that turns info boards into an interactive guide:
+                a clickable map, searchable cards, readable text, seasonal notes, and photo galleries.
+              </p>
+              <p>
+                Admin mode lets you curate locally: edit titles and stories, add and remove photos, move pins,
+                hide features, or delete them permanently. Everything is saved in your browser storage.
+              </p>
+            </div>
+          </section>
+
+          <section class="about__section">
+            <div class="about__title">How to use the portal (quick guide)</div>
+            <div class="prose">
+              <p><strong>Explore</strong>: click a pin or a card to open a feature.</p>
+              <p><strong>Filter</strong>: click tags to filter both the map pins and the list.</p>
+              <p><strong>Tour</strong>: use the Tour panel to step through pinned features with an animated path.</p>
+              <p class="muted"><em>Placeholder:</em> add a short suggested “first-time route” here.</p>
+            </div>
+          </section>
+
+          <section class="about__section">
+            <div class="about__title">Site etiquette & care</div>
+            <div class="prose">
+              <p class="muted"><em>Placeholder:</em> add simple guidelines (stay on paths, don’t disturb shelters, respect wildlife).</p>
+            </div>
+          </section>
+
+          <section class="about__section">
+            <div class="about__title">Credits & contributors</div>
+            <div class="prose">
+              <p class="muted"><em>Placeholder:</em> list artists/board authors, photographers, and helpers.</p>
+            </div>
+          </section>
+
+          <section class="about__section">
+            <div class="about__title">Changelog</div>
+            <div class="prose">
+              <p class="muted"><em>Placeholder:</em> track what changed and when (new features, new photos, new boards).</p>
+            </div>
+          </section>
+
+          <section class="about__section">
+            <div class="about__title">Contact</div>
+            <div class="prose">
+              <p class="muted"><em>Placeholder:</em> add a contact email, QR code destination, or visitor info link.</p>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
+
+
