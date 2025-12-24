@@ -370,10 +370,12 @@ function main() {
   const $modal = el("modal");
   const $modalTitle = el("modalTitle");
   const $modalBoardImg = el("modalBoardImg");
-  const $modalText = el("modalText");
+  const $modalDesc = el("modalDesc");
   const $modalNarrative = el("modalNarrative");
   const $modalTags = el("modalTags");
   const $modalClose = el("modalClose");
+  const $modalPrevFeature = el("modalPrevFeature");
+  const $modalNextFeature = el("modalNextFeature");
   const $modalSeasonal = el("modalSeasonal");
   const $modalGallery = el("modalGallery");
   const $galleryPrev = el("galleryPrev");
@@ -764,6 +766,29 @@ function main() {
     return qOk && tagOk;
   }
 
+  function setModalOpenState(open) {
+    document.body.classList.toggle("is-modal-open", !!open);
+  }
+
+  function filteredFeatureIds() {
+    return features
+      .filter((f) => !isDeleted(f))
+      .filter((f) => !isHidden(f))
+      .filter(matches)
+      .sort((a, b) => getEffectiveTitle(a).localeCompare(getEffectiveTitle(b)))
+      .map((f) => f.id);
+  }
+
+  function updateModalPrevNextButtons() {
+    const ids = filteredFeatureIds();
+    const idx = state.activeFeatureId ? ids.indexOf(state.activeFeatureId) : -1;
+    const hasMany = ids.length > 1 && idx >= 0;
+    $modalPrevFeature.disabled = !hasMany;
+    $modalNextFeature.disabled = !hasMany;
+    $modalPrevFeature.hidden = ids.length <= 1;
+    $modalNextFeature.hidden = ids.length <= 1;
+  }
+
   function renderTagButtons() {
     const tags = allEffectiveTags();
     $tagList.innerHTML = tags
@@ -829,12 +854,24 @@ function main() {
   }
 
   function renderSeasonal(feature) {
-    const notes = guessSeasonalNotes(feature);
+    const seasonalNotes =
+      feature &&
+      feature.seasonalNotes &&
+      typeof feature.seasonalNotes === "object" &&
+      typeof feature.seasonalNotes.Spring === "string" &&
+      typeof feature.seasonalNotes.Summer === "string" &&
+      typeof feature.seasonalNotes.Autumn === "string" &&
+      typeof feature.seasonalNotes.Winter === "string"
+        ? feature.seasonalNotes
+        : guessSeasonalNotes(feature);
+
     const seasons = ["Spring", "Summer", "Autumn", "Winter"];
+    const emojis = { Spring: "🌱", Summer: "☀️", Autumn: "🍂", Winter: "❄️" };
     $modalSeasonal.innerHTML = seasons
       .map((s) => {
-        const txt = notes[s] || "";
-        return `<div class="season-card"><div class="season-card__title">${escapeHtml(s)}</div><div class="season-card__text">${escapeHtml(
+        const txt = seasonalNotes[s] || "";
+        const title = `${emojis[s] || ""} ${s}`.trim();
+        return `<div class="season-card"><div class="season-card__title">${escapeHtml(title)}</div><div class="season-card__text">${escapeHtml(
           txt
         )}</div></div>`;
       })
@@ -1037,11 +1074,17 @@ function main() {
     $modalBoardImg.src = resolveImg(boardImg);
     $modalBoardImg.alt = `${effTitle} image`;
 
+    // Short description (shown separately from the Story)
+    const desc =
+      (typeof f.description === "string" ? f.description.trim() : "") ||
+      (f.pages && f.pages[0] && typeof f.pages[0].textPreview === "string" ? f.pages[0].textPreview.trim() : "") ||
+      "";
+    $modalDesc.innerHTML = desc ? toParagraphs(desc, state.q) : "<p class=\"muted\">—</p>";
+
     // Narrative (creative) + Original extracted text (details)
     const fWithTags = { ...f, title: effTitle, tags: getEffectiveTags(f) };
     const storyOverride = getEffectiveStoryText(f);
     $modalNarrative.innerHTML = storyOverride ? toParagraphs(storyOverride, state.q) : generateNarrative(fWithTags);
-    $modalText.innerHTML = toParagraphs(f.text, state.q);
     renderSeasonal(f);
     renderGallery(f, resolveImg(boardImg));
 
@@ -1061,6 +1104,8 @@ function main() {
       updateTourUI();
     }
     if (!$modal.open) $modal.showModal();
+    setModalOpenState(true);
+    updateModalPrevNextButtons();
   }
 
   // --- Map HUD hover + click-to-copy (kept, since the DOM is present) ---
@@ -1687,6 +1732,29 @@ function main() {
   $modalClose.addEventListener("click", () => closeDialog($modal));
   $modal.addEventListener("click", (e) => {
     if (e.target === $modal) closeDialog($modal);
+  });
+  $modal.addEventListener("close", () => {
+    setModalOpenState(false);
+  });
+
+  // Prev/Next feature navigation (modal header)
+  $modalPrevFeature.addEventListener("click", () => {
+    if (!$modal.open) return;
+    const ids = filteredFeatureIds();
+    if (!state.activeFeatureId) return;
+    const idx = ids.indexOf(state.activeFeatureId);
+    if (idx < 0 || ids.length < 2) return;
+    const prevId = ids[(idx - 1 + ids.length) % ids.length];
+    openFeature(prevId);
+  });
+  $modalNextFeature.addEventListener("click", () => {
+    if (!$modal.open) return;
+    const ids = filteredFeatureIds();
+    if (!state.activeFeatureId) return;
+    const idx = ids.indexOf(state.activeFeatureId);
+    if (idx < 0 || ids.length < 2) return;
+    const nextId = ids[(idx + 1) % ids.length];
+    openFeature(nextId);
   });
 
   // Tour controls (side panel)

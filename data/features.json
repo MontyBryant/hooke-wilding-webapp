@@ -13,9 +13,17 @@
           "image": "assets/field-guide/placeholder.svg",
           "width": 0,
           "height": 0,
-          "textPreview": "Coming soon."
+          "textPreview": "A living boundary made from stacked branches and brash. It’s a quiet larder and shelter belt for insects, birds, and small mammals."
         }
       ],
+      "description": "A living boundary made from stacked branches and brash. It’s a quiet larder and shelter belt for insects, birds, and small mammals.",
+      "seasonalNotes": {
+        "Spring": "Fresh growth along the hedge line brings early insects—watch for busy birds collecting nesting material nearby.",
+        "Summer": "Peak invertebrate season: pause to listen for buzzing and scan blossoms and leaf edges for caterpillars and beetles.",
+        "Autumn": "Seeds and berries draw birds; look for fungal fruiting bodies on damp wood after rain.",
+        "Winter": "A shelter belt in the wind—spot roosting birds and look for tracks where animals use the hedge as cover."
+      },
+      "story": "At first glance it looks like a tidy pile of sticks. But the Dead Hedge is really a busy apartment block disguised as a boundary.\n\nStep closer (politely). In the gaps and shadows, small lives rehearse their daily routines: hiding, hunting, nesting, nibbling, and not being eaten.\n\nIf you stay still for long enough, you’ll notice the hedge is never actually still. It’s a soft edge where the farm quietly says: “Yes, you can live here too.”",
       "text": "",
       "tags": []
     },
@@ -30,9 +38,17 @@
           "image": "assets/field-guide/placeholder.svg",
           "width": 0,
           "height": 0,
-          "textPreview": "Coming soon."
+          "textPreview": "A reminder that ‘dead’ wood is full of life. Look for fungi, beetles, and the tiny habitats that form as the trunk slowly returns to soil."
         }
       ],
+      "description": "A reminder that ‘dead’ wood is full of life. Look for fungi, beetles, and the tiny habitats that form as the trunk slowly returns to soil.",
+      "seasonalNotes": {
+        "Spring": "New leaves and rising sap bring activity—scan the bark for beetles and listen for birds feeding on hidden larvae.",
+        "Summer": "Warmth speeds decomposition: look for ants, wood-boring beetles, and sunning reptiles nearby.",
+        "Autumn": "Prime fungi time—after wet weather, check the log for brackets, mushrooms, and softening bark.",
+        "Winter": "A winter larder: woodpecker holes and peeled bark can reveal where birds have been hunting insects."
+      },
+      "story": "The Fallen Tree has retired from standing up, and it’s never looked happier.\n\nWhere a trunk meets the ground, the whole plot thickens: fungi move in with quiet confidence, beetles arrive like tiny engineers, and birds turn up for the buffet.\n\nWilding has a sense of humour—what we call “fallen” is often the start of an entirely new career. This is a slow-motion feast, a shelter, and a nursery all at once.",
       "text": "",
       "tags": []
     },
@@ -47,9 +63,17 @@
           "image": "assets/field-guide/placeholder.svg",
           "width": 0,
           "height": 0,
-          "textPreview": "Coming soon."
+          "textPreview": "A playful landmark and a perfect pause-point on the walk. Sit, look out across the site, and notice what’s flowering, buzzing, and moving."
         }
       ],
+      "description": "A playful landmark and a perfect pause-point on the walk. Sit, look out across the site, and notice what’s flowering, buzzing, and moving.",
+      "seasonalNotes": {
+        "Spring": "Great for spotting the first waves of blossom and fresh green—listen for dawn birdsong and nesting bustle.",
+        "Summer": "Use it as a butterfly-and-bee lookout—scan sunny edges where flowers meet longer grass.",
+        "Autumn": "Watch the colour shift and seed heads form; birds often move along hedges and rides at this time.",
+        "Winter": "Clear views for silhouettes and tracks—look for winter birds moving in small flocks across open ground."
+      },
+      "story": "Some landmarks are ancient standing stones. Some are giant chairs. Hooke Farm contains multitudes.\n\nThe Giant Chair is a polite invitation to do the most wilding-friendly thing possible: stop. Sit. Breathe. Look.\n\nFrom here you can watch the site behave like itself—flowers leaning, insects commuting, birds complaining, and grasses waving as if they’ve heard excellent gossip.",
       "text": "",
       "tags": []
     },
@@ -64,9 +88,17 @@
           "image": "assets/field-guide/placeholder.svg",
           "width": 0,
           "height": 0,
-          "textPreview": "Coming soon."
+          "textPreview": "A wonderfully odd feature with a name that makes you smile. It’s a small stop that hints at how the farm mixes usefulness, humour, and habitat."
         }
       ],
+      "description": "A wonderfully odd feature with a name that makes you smile. It’s a small stop that hints at how the farm mixes usefulness, humour, and habitat.",
+      "seasonalNotes": {
+        "Spring": "A good stop for noticing new growth and early insects—hover a moment and watch the edges come alive.",
+        "Summer": "Expect constant small movement: flies, beetles, and bees working the sunny side of anything sheltering.",
+        "Autumn": "Look for fallen feathers, seed heads, and foraging signs—edges become busy as food gets patchier.",
+        "Winter": "A sheltered nook to pause in wind and rain; look for footprints and the quiet patterns of daily routes."
+      },
+      "story": "Hen Henge sounds like something you’d stumble across in a myth, right after a mysterious fog and just before a life-changing cup of tea.\n\nIn reality, it’s a small reminder that wilding isn’t only serious science—it’s also joy, curiosity, and the occasional splendidly silly name.\n\nStand here for a moment. The best features don’t shout; they wink. And this one definitely winks.",
       "text": "",
       "tags": []
     },
@@ -81,9 +113,17 @@
           "image": "assets/field-guide/placeholder.svg",
           "width": 0,
           "height": 0,
-          "textPreview": "Coming soon."
+          "textPreview": "A Jurassic nod tucked into the landscape. A place to think about deep time, local stone, and the layers beneath our feet."
         }
       ],
+      "description": "A Jurassic nod tucked into the landscape. A place to think about deep time, local stone, and the layers beneath our feet.",
+      "seasonalNotes": {
+        "Spring": "Low sun and fresh growth make textures pop—great for noticing stone surfaces, lichen, and tiny plants in cracks.",
+        "Summer": "In heat, stone holds warmth—watch for basking insects and listen for the hum of summer nearby.",
+        "Autumn": "After rain, colours deepen; look for moss brightening and fungal spots appearing around damp edges.",
+        "Winter": "Best season for form and silhouette—clear air and low light make the ‘deep time’ feeling strongest."
+      },
+      "story": "Imagine Dorset when it was sea, and the sea was busy.\n\nIchthyosaurus is your doorway into deep time: a playful nudge that says, “Everything you’re standing on has stories older than trees.”\n\nTouch the idea more than the object. Let your mind swim backwards through layers—then come back to the present, where lichen writes its own slow, living script on stone.",
       "text": "",
       "tags": []
     },
@@ -98,9 +138,17 @@
           "image": "assets/field-guide/placeholder.svg",
           "width": 0,
           "height": 0,
-          "textPreview": "Coming soon."
+          "textPreview": "A roof designed to be alive: planted, insulating, and rich in micro-habitats. Great for invertebrates, and a lovely example of ‘built’ nature."
         }
       ],
+      "description": "A roof designed to be alive: planted, insulating, and rich in micro-habitats. Great for invertebrates, and a lovely example of ‘built’ nature.",
+      "seasonalNotes": {
+        "Spring": "Look for fresh sedum/plant growth and early pollinators on warm mornings; tiny flowers can be surprisingly busy.",
+        "Summer": "Peak bloom—expect bees and hoverflies. Heat shimmer and scent can be strong on still days.",
+        "Autumn": "Seed heads and dried stems provide structure; watch for spiders and late insects hunting in the shelter.",
+        "Winter": "The roof becomes a hardy, low-maintenance habitat—notice evergreen patches and frost patterns clinging to plants."
+      },
+      "story": "Most roofs have one job: keep weather out. This one has two: keep weather out and invite wildlife in.\n\nThe Green Roof is a tiny meadow that decided to live on top of a building. It drinks sun, holds heat, and offers a miniature neighbourhood of crevices, stems, and shelter.\n\nIf you ever need proof that “built” and “wild” can be friends, this is it—quietly blooming above your head like it planned it all along.",
       "text": "",
       "tags": []
     },
@@ -115,9 +163,17 @@
           "image": "assets/field-guide/placeholder.svg",
           "width": 0,
           "height": 0,
-          "textPreview": "Coming soon."
+          "textPreview": "A nesting site built to support one of the farm’s most iconic hunters. Keep your eyes open at dusk for silent flight along field edges."
         }
       ],
+      "description": "A nesting site built to support one of the farm’s most iconic hunters. Keep your eyes open at dusk for silent flight along field edges.",
+      "seasonalNotes": {
+        "Spring": "Breeding season begins—keep a respectful distance. Dusk is best for a chance of a hunting pass along edges.",
+        "Summer": "Long evenings: watch low, wavering flight over rough grass. Listen for calls near dark on still nights.",
+        "Autumn": "Young owls disperse; hunting can be active as nights lengthen—scan fence lines and field margins at dusk.",
+        "Winter": "Hard weather pushes hunting into daylight edges; look for pellets beneath roost spots and near posts."
+      },
+      "story": "A Barn Owl Box is a promise with a hinge: if the habitat is right, the wild might accept the invitation.\n\nNothing about a barn owl is loud. You don’t get a grand entrance—just a hush, a pale shape, and suddenly the field is listening.\n\nSo this is a place to practice dusk-patience. Watch the edges. Let the evening arrive. And if you’re lucky, you’ll see the silent sentence of flight written across the air.",
       "text": "",
       "tags": []
     },
@@ -132,9 +188,17 @@
           "image": "assets/field-guide/placeholder.svg",
           "width": 0,
           "height": 0,
-          "textPreview": "Coming soon."
+          "textPreview": "A striking, spiky silhouette that’s hard to miss. A small landmark to orient yourself—and a great spot for photos in changing light."
         }
       ],
+      "description": "A striking, spiky silhouette that’s hard to miss. A small landmark to orient yourself—and a great spot for photos in changing light.",
+      "seasonalNotes": {
+        "Spring": "Fresh greens around it make the spiky silhouette stand out—great for contrast photos and listening for birds.",
+        "Summer": "Strong midday sun can be dramatic; try early morning or golden hour for softer light and more wildlife movement.",
+        "Autumn": "Moody skies and changing colour palettes make this a standout landmark—look for birds feeding nearby.",
+        "Winter": "The classic season for silhouettes—frost and low sun can make the structure feel almost sculptural."
+      },
+      "story": "The Monkey Puzzle doesn’t just sit in the landscape—it declares itself.\n\nIts branches look like they were designed by a whimsical architect who only had triangles and attitude. Birds treat it as a lookout tower; walkers treat it as a compass.\n\nIf you ever lose your bearings, find the spiky silhouette and reset. The tree is basically saying: “You are here. Now go notice everything.”",
       "text": "",
       "tags": []
     },
@@ -149,9 +213,17 @@
           "image": "assets/field-guide/placeholder.svg",
           "width": 0,
           "height": 0,
-          "textPreview": "Coming soon."
+          "textPreview": "A tree-and-stone moment that invites a slower look. Notice textures—bark, lichen, moss—and the small lives that hide in the cracks and shade."
         }
       ],
+      "description": "A tree-and-stone moment that invites a slower look. Notice textures—bark, lichen, moss—and the small lives that hide in the cracks and shade.",
+      "seasonalNotes": {
+        "Spring": "Look for new leaves, fresh moss, and early insects on the sunny side; birds often forage along textured bark.",
+        "Summer": "In shade, it stays cool—good for spotting butterflies resting and spiders’ webs catching the light.",
+        "Autumn": "After rain, colours deepen; lichen and moss glow. Great time for fungi on nearby wood and roots.",
+        "Winter": "Best for reading structure: bark patterns, lichen maps, and the way stone holds damp and frost."
+      },
+      "story": "Tree Lith is a small stage for big details.\n\nBark becomes a map. Lichen becomes handwriting. Moss becomes velvet. Stone becomes a sun-warmed seat for an insect that will never know it’s sitting on geology.\n\nThis is a place to swap speed for attention. The reward is that everything you thought was “background” becomes the main event.",
       "text": "",
       "tags": []
     },
@@ -166,9 +238,17 @@
           "image": "assets/field-guide/placeholder.svg",
           "width": 0,
           "height": 0,
-          "textPreview": "Coming soon."
+          "textPreview": "A watery corner for amphibians and pond life. In spring you might spot spawn, in summer dragonflies, and year-round the signs of hidden visitors."
         }
       ],
+      "description": "A watery corner for amphibians and pond life. In spring you might spot spawn, in summer dragonflies, and year-round the signs of hidden visitors.",
+      "seasonalNotes": {
+        "Spring": "Peak amphibian season—look for spawn and listen for evening calls. Tread carefully near pond edges.",
+        "Summer": "Dragonflies and damselflies patrol the margins; watch for tadpoles and water beetles in shallows.",
+        "Autumn": "Leaves fall in—look for frogs/toads sheltering nearby and birds coming to drink on quiet days.",
+        "Winter": "Life slows: amphibians overwinter nearby. Scan the surface for ice patterns and the edges for tracks."
+      },
+      "story": "Toad Pond is the farm’s small mirror—reflecting sky, reeds, and whatever dares to move across the surface.\n\nIn spring it becomes a nursery; in summer, an airshow for dragonflies; in autumn, a quiet drinking place; in winter, a lesson in patience.\n\nIf you want to meet the shy residents, bring stillness. Water rewards the slow.",
       "text": "",
       "tags": []
     },
@@ -183,9 +263,17 @@
           "image": "assets/field-guide/placeholder.svg",
           "width": 0,
           "height": 0,
-          "textPreview": "Coming soon."
+          "textPreview": "A calm patch of water with a sense of history. Watch for ripples, reeds, and the birds that patrol the margins."
         }
       ],
+      "description": "A calm patch of water with a sense of history. Watch for ripples, reeds, and the birds that patrol the margins.",
+      "seasonalNotes": {
+        "Spring": "Birdsong and nesting activity ramps up; look for new reed shoots and early insects skimming the surface.",
+        "Summer": "Watch for dragonflies, swallows, and the shimmer of life on hot days; early mornings are often best.",
+        "Autumn": "Migrants may pause; falling leaves and softer light make reflections beautiful—look for fish ripples.",
+        "Winter": "Quiet and reflective—scan for winter birds and note how water levels and vegetation change."
+      },
+      "story": "Old Mill Pond keeps its secrets in ripples.\n\nStand still and you’ll see the whole place rearrange itself: a shadow passes under the surface, reeds sway like they’re whispering, and birds patrol the edges with professional focus.\n\nIt’s a history-heavy kind of calm—water that remembers. Visit often and you’ll notice it never tells the same story twice.",
       "text": "",
       "tags": []
     },
@@ -200,9 +288,17 @@
           "image": "assets/field-guide/placeholder.svg",
           "width": 0,
           "height": 0,
-          "textPreview": "Coming soon."
+          "textPreview": "A pocket of fruit trees where blossom and fallen fruit feed the food web. Listen for bees in spring and birds in autumn."
         }
       ],
+      "description": "A pocket of fruit trees where blossom and fallen fruit feed the food web. Listen for bees in spring and birds in autumn.",
+      "seasonalNotes": {
+        "Spring": "Blossom season—stand still and you’ll hear bees. Watch for pollinators and early butterflies on warm days.",
+        "Summer": "Fruit begins to form; look for birds feeding and insects working leaves and flowers in the understory.",
+        "Autumn": "Fallen fruit draws wasps, thrushes, and small mammals—great time for busy, messy abundance.",
+        "Winter": "Bare branches reveal structure; look for lichens, buds, and winter birds using trees as perches."
+      },
+      "story": "The Orchard is where the farm quietly practices generosity.\n\nIn spring it throws confetti (blossom) for the bees. In summer it grows weight and sweetness. In autumn it lets the ground become a feast. In winter it stands back and shows you the architecture of branches.\n\nIt’s a place where food is never just for humans—and that’s exactly the point.",
       "text": "",
       "tags": []
     },
@@ -217,9 +313,17 @@
           "image": "assets/field-guide/placeholder.svg",
           "width": 0,
           "height": 0,
-          "textPreview": "Coming soon."
+          "textPreview": "A shared route through the landscape—part access, part corridor. Edges like this are often wildlife hotspots, so walk slowly and scan ahead."
         }
       ],
+      "description": "A shared route through the landscape—part access, part corridor. Edges like this are often wildlife hotspots, so walk slowly and scan ahead.",
+      "seasonalNotes": {
+        "Spring": "Hedgerows and verges green up fast—look for early wildflowers and listen for territorial birds.",
+        "Summer": "A corridor for butterflies and bees—scan sunny banks and flower-rich edges as you walk.",
+        "Autumn": "Berries and seed heads draw birds; look for mushrooms on damp verges after rain.",
+        "Winter": "Great for tracking: footprints in soft ground and clear views of birds moving between cover."
+      },
+      "story": "The Public Bridleway is a shared thread—human footsteps, hoof prints, and wild routes braided together.\n\nEdges are where stories happen: hedges hold nests, verges hold flowers, and cover holds creatures that would rather not be seen.\n\nWalk it like a guest, not an owner. If you keep your pace gentle, the bridleway will show you the busy life running alongside it.",
       "text": "",
       "tags": []
     },
@@ -234,9 +338,17 @@
           "image": "assets/field-guide/placeholder.svg",
           "width": 0,
           "height": 0,
-          "textPreview": "Coming soon."
+          "textPreview": "Where growing food meets letting things get a bit wilder. A mix of beds, edges, and ‘volunteer’ plants that invite pollinators and predators alike."
         }
       ],
+      "description": "Where growing food meets letting things get a bit wilder. A mix of beds, edges, and ‘volunteer’ plants that invite pollinators and predators alike.",
+      "seasonalNotes": {
+        "Spring": "Seedlings, blossom, and early weeds all appear—look for hoverflies, ladybirds, and the first bumblebees.",
+        "Summer": "Peak pollinator time—scan flowering herbs and edges. You’ll often see predators too: spiders, wasps, and birds.",
+        "Autumn": "Harvest season plus seed heads—leave some stems for overwintering insects and watch for late foragers.",
+        "Winter": "Structure matters: piles, stems, and compost become shelter. Great time to notice ‘habitat gardening’ in action."
+      },
+      "story": "The Wild Veg Garden is what happens when you stop insisting on perfection and start inviting allies.\n\nYes, there are vegetables. And yes, there are weeds. But the real magic is the conversation between them: flowers calling in pollinators, predators arriving to keep balance, compost turning yesterday into next month.\n\nIt’s a kitchen garden with a slightly untamed grin—growing food while quietly growing habitat too.",
       "text": "",
       "tags": []
     },
@@ -251,9 +363,17 @@
           "image": "assets/field-guide/placeholder.svg",
           "width": 0,
           "height": 0,
-          "textPreview": "Coming soon."
+          "textPreview": "A broad brush of colour and nectar when the season is right. The best place to linger for butterflies, bees, and the constant, quiet movement of grass."
         }
       ],
+      "description": "A broad brush of colour and nectar when the season is right. The best place to linger for butterflies, bees, and the constant, quiet movement of grass.",
+      "seasonalNotes": {
+        "Spring": "Early flowers begin to appear; watch for the first butterflies and listen for skylark-like energy overhead.",
+        "Summer": "The headline season—nectar, butterflies, and bees. Visit on warm, still days for maximum activity.",
+        "Autumn": "Seed heads and grasses take over—look for finches feeding and late blooms hanging on.",
+        "Winter": "A season of structure: stems, frost, and tracks. Notice how ‘empty’ meadow still shelters life."
+      },
+      "story": "Wildflower Meadow doesn’t do stillness. It does shimmer.\n\nOn a good summer day the air is full of wings: bees commuting, butterflies zig-zagging, and grasses nodding like they’re keeping time.\n\nCome back in autumn and it turns into a library of seed heads. Come back in winter and it becomes sculpture. The meadow is always working—just at different speeds.",
       "text": "",
       "tags": []
     },
@@ -272,6 +392,13 @@
         }
       ],
       "text": "You may have noticed these piles of stone\naround the site - they're insect cairns. We\nuse them as markers for the butterfly\ntransept. They're made from waste stone\ndug up from our yard.\nINSECT APOCALYPSE\n Please read 'Silent Earth' -\nit's a revelation about the\nplight of insects and why\nwe need to be concerned\nabout them.\nLEARNING ABOUT INSECTS\nRemember that insects are a vital ingredient in the web\nof life. They are food for birds and fish, which are, of\ncourse, in decline too.\nThe brilliant thing about our wilding project is that\ninsects love it - and I love them.\nIn part, my interest was sparked by Dave Goulson, author\nof numerous books about insects. He explained that\nthere has been a devastating decline in insects over the\nlast 100 years.\nINSECT HOMES:\nI've become fascinated by insects and have seen lots\nof different types at Hooke Farm - many of which I\ndidn't know existed.",
+      "seasonalNotes": {
+        "Spring": "Early warm spells bring the first pollinators—watch sunny stones and nearby flowers for activity.",
+        "Summer": "Peak diversity: hover over flowers and watch the cairns for beetles, ants, and bees coming and going.",
+        "Autumn": "Late nectar becomes precious—look for final foraging bursts and spiders hunting around the structure.",
+        "Winter": "A shelter season—many insects overwinter in crevices; avoid disturbing and look instead for tracks and birds hunting."
+      },
+      "story": "This is where the tiniest residents get the best housing.\n\nInsect Homes are both practical and poetic: a handful of materials arranged so that beetles, bees, and other busy workers can shelter, breed, and quietly keep the whole place running.\n\nIf you want to feel hopeful, watch the entrances for a minute. The traffic tells you the ecosystem is clocking in for work.",
       "tags": [
         "Insects"
       ]
@@ -291,6 +418,13 @@
         }
       ],
       "text": "We think this is a rat hole!!\nWe\u2019re delighted to find that we have rat holes\naround our garden - and embrace them.  They play\na crucial role in our eco-system for example by:\n\u201cWhy do we want certain animals around us and not\nother animals? In new build homes, facilities are made in\nthe cavity to provide bats with a home. At the same time,\nrats are controlled with clamps, glue plates and poision.\u201d\n Scavenging:  Rats help clean up by\nscavenging and consuming waste carrion\nwhich can reduce the spread of disease.\nSeed dispersal:  They can help with plant\npropagation by spreading seeds.\nBeing prey:  They serve as a food source for\nmany predators such as snakes, owls and\nother birds of prey, such as buzzards and red\nkites.",
+      "seasonalNotes": {
+        "Spring": "As food sources shift, watch for fresh signs near compost and edges—remember they’re part of the wider food web.",
+        "Summer": "Activity is often at dawn/dusk—look for runs through vegetation and listen for rustling in cover.",
+        "Autumn": "Foraging ramps up—fallen fruit and seeds attract many animals; predators may follow the same routes.",
+        "Winter": "Tracks in mud or frost can reveal paths; avoid feeding or leaving waste that concentrates animals unnaturally."
+      },
+      "story": "The Rats board asks you to do something brave: swap disgust for curiosity.\n\nRats are not a fairy-tale villain here—they’re part of the system. They clean up, move seeds, and, importantly, become food for predators.\n\nWilding isn’t about choosing “cute” animals. It’s about letting the whole cast do their jobs, even the ones with terrible PR.",
       "tags": [
         "Mammals"
       ]
@@ -310,6 +444,13 @@
         }
       ],
       "text": "The standing stones were installed\nin September 2020. We chose them\nstraight from the quarry at\nMarnhull Stone near Sturminster\nNewton.\nThe stone is from the Corallian\ngroup of limestones which are\nabout 160 million years old and they\nwere deposited during the Jurassic\nperiod between 145 and 201 million\nyears ago, when the sea level was\nretreating!\nThe stones arrived on an\narticulated lorry\nAt least a third of each\nstone is underground\nThey were installed by our\nwonderful digger man,\nKevin Holt\nSTANDING STONES",
+      "seasonalNotes": {
+        "Spring": "Lichen and moss can brighten; morning light shows texture beautifully—good for slow, close looking.",
+        "Summer": "Stone holds heat—watch for basking insects and listen for the hum of summer along nearby edges.",
+        "Autumn": "After rain, colours deepen; low sun makes shadows dramatic and highlights the stones’ shapes.",
+        "Winter": "The best season for silhouette and geology—frost and low light reveal form without distraction."
+      },
+      "story": "The Standing Stones are time travellers with excellent posture.\n\nThey’re modernly placed, but the story in the rock is ancient: Jurassic seas, retreating water, and limestone laid down layer by layer when Dorset had a very different job description.\n\nWalk around them slowly. The stones don’t move, but your perspective does—and that’s the trick.",
       "tags": [
         "Geology"
       ]
@@ -329,6 +470,13 @@
         }
       ],
       "text": "Wild Bees & Birds\nThese bird boxes were built for swifts but we think\nthey are too low - and the swifts wouldn\u2019t have liked\nthe creeper either.  The first occupants were starlings,\nbut the bees usurped them - European honey bees\n(Apis mellifera).\nHowever, one rather brave or foolish starling returned\nthis year and made his or her nest in one of the holes\nbetween the bees.  It wasn\u2019t a great success as the\nbird died - presumably killed by the bees.\nI love it when they form clusters like in the photo.  At\ntimes we could see honey seeping through the wood.  I\nthink that the swift boxes are a bit small for all the\nbees that want to live there, but they don\u2019t seem\ndeterred!",
+      "seasonalNotes": {
+        "Spring": "Nesting season begins and bee activity rises—watch entrances for comings and goings on warm days.",
+        "Summer": "Peak buzzing: look for clustered bees and busy flight paths; early morning and late afternoon are often best.",
+        "Autumn": "Colonies prepare for colder weather—activity can spike on sunny days as they stock up.",
+        "Winter": "Mostly quiet outside—look for shelter use and remember many insects and birds are conserving energy."
+      },
+      "story": "This feature is a tiny soap opera in wooden real estate.\n\nBoxes were built with one tenant in mind, but wilding has a way of saying, “Nice plan—here’s what actually happened.” Bees moved in. Birds negotiated. Outcomes varied.\n\nThe lesson is simple: provide habitat and let nature handle the casting. The best stories are never fully scripted.",
       "tags": [
         "Bees",
         "Birds"
@@ -349,6 +497,13 @@
         }
       ],
       "text": "Our Sweet Track\nA \u2018Sweet Track\u2019 is a Neolithic timber walkway\nand was originally part of a network of tracks\nbuilt to provide a dry path across marshy\nground. The trees were cut using stone and\nflint axes making planks from oak, ash and\nlime, whereas the poles were made with hazel\n& alder.  The track found by Ray Sweet was\npreserved in the peat bog and it was thought\nto date back to around 3800 BC!\nOur Sweet track is made from\nsweet chestnut stakes and oak\nplanks.\nThe idea for its installation came\nfrom Andrew George, from Wessex\nWilding.  It was constructed by a\nsmall team headed by Joe Wood -\nin the early stages helped by\nJasper Rayner and later by Bertie\nClark. They\u2019ve all been involved in\na number of projects at Hooke\nJasper & Joe\nJoe & Bertie\nAndrew George",
+      "seasonalNotes": {
+        "Spring": "A great time for a slower walk—fresh growth and damp ground highlight why raised paths matter.",
+        "Summer": "Use it as a calm route through busy habitat; early morning walks can be full of birdsong and insects.",
+        "Autumn": "Falling leaves and softer light make it atmospheric—watch for fungi on nearby wood after rain.",
+        "Winter": "Best for reading the land: tracks, stems, and silhouettes. Take care on slippery boards after frost."
+      },
+      "story": "The Sweet Track is an idea that keeps getting reinvented: “How do we cross wet ground without fighting it?”\n\nNeolithic people built their answer out of timber. Hooke Farm built theirs out of sweet chestnut and oak. Different centuries, same problem-solving.\n\nWalk it and imagine the original track under your feet—then look up and notice how wilding turns a path into a place.",
       "tags": [
         "History"
       ]
@@ -368,6 +523,13 @@
         }
       ],
       "text": "We were very proud of our beautiful\nbat egg. Built from waste stone to\nhouse a few different bat species\nwith a specal cave inside.\nBut I think the bats knew more than\nwe did - they visited but never\nsettled. And then the egg collapsed,\nfirst on one side and then the other,\nin the past year.\nWe are not planning to rebuild it but\nlet it become a glorious ruin covered\nin wild flowers.\nStone carver, Tom Clark,built the bat\negg, finishing in December 2021.\nwww.tomclarkstonecarver.co.uk\nBe Careful - it\u2019s not\nsafe. Please don\u2019t\ngo close to it!!!\nThe Bat Egg\nhas collapsed!\nPipistrelle bats weigh between 3.5\nand 8.5 grams, but can eat up to\n3,000 insects in a single night!\nThey may be living in the crevices\nof the bat egg.",
+      "seasonalNotes": {
+        "Spring": "As evenings warm, bats return to feeding routes—dusk is the moment to watch above hedges and open rides.",
+        "Summer": "Peak bat season—try a still, warm night for the best chance of activity. Listen for insects too.",
+        "Autumn": "Feeding intensifies before winter—watch for late dusk flights on mild evenings.",
+        "Winter": "Bats are largely inactive/hibernating—this becomes a place to think about shelter and seasonal cycles."
+      },
+      "story": "The Bat Egg is a story about ambition—and nature’s right to disagree.\n\nIt was built with care and imagination, and then the bats did what bats do: they inspected, they visited… and they chose other plans.\n\nNow it’s becoming something else: a ruin, a texture, a wildflower stage set. Wilding loves a second act.",
       "tags": [
         "Bats"
       ]
@@ -387,6 +549,13 @@
         }
       ],
       "text": "It's an underground home that\namphibians and reptiles use\nthroughout winter to protect\nthemselves from the cold.\nThere are lots of frogs, toads and\nnewts in or near our ponds. They\nlove the boggy ground and sunny\nspots.  By creating a hibernaculum\nwe have provided a safe space for\nthem to hibernate over winter.\nHOW WE CREATED THE HIBERNACULUM\nWe lifted an area of turf about 1\nby 2 metres and dug out the soil\nat a depth of 50cm\nWe used old tiles to create entrance\ntunnels into the centre\nWe then filled the hole with rocks &\nlogs to create crawl spaces\nWe covered this with loose soil and the\noriginal turf was laid on top\nWe made sure the entrance tunnels were\naccessible\nAs the logs decompose\nthey release heat\nwarming  the\nhibernaculum and\nmaking it an ideal\nhibernation habitat for\namphibians & reptiles\nWHAT IS A HIBERNACULUM?\nOUR HIBERNACULUM\nIt was inspired and built by\nOscar McCarthy, in May\n2022. He has been working\nhere helping with land\nmanagement since 2021.",
+      "seasonalNotes": {
+        "Spring": "Amphibians and reptiles begin to emerge—nearby sunny patches can be productive for sightings.",
+        "Summer": "A quiet refuge from heat—look around the edges for signs of use, but avoid disturbing entrances.",
+        "Autumn": "Animals seek shelter as temperatures drop—this is when safe overwintering spaces matter most.",
+        "Winter": "The headline season for a hibernaculum—leave it undisturbed and think ‘shelter, not spectacle’."
+      },
+      "story": "The Hibernaculum is a five-star winter hotel for creatures who hate central heating.\n\nBuilt from logs and rocks and good intentions, it offers the kind of shelter that lets amphibians and reptiles make it through cold weather safely.\n\nIt’s not a feature you “see” so much as a feature you provide. And that’s the whole wilding point: you build the stage, then you let the actors arrive on their own timetable.",
       "tags": [
         "Amphibians & Reptiles"
       ]
@@ -406,6 +575,13 @@
         }
       ],
       "text": "MOUNT SCOTLAND\nMy husband, Jamie Macdonald, is proud of his\nScottish heritage so we decided to dedicate this\nmound to him.  It includes 3 Scot's Pine trees and 2\ndriftwood stags.  The stags were bought in\nBridport market and made from driftwood which\noriginated in Indonesia - sadly, as a result of the\nhorrendous deforestation  However the wood\nwas drifting for some time before being made into\nsculptures, which makes them very resilient to\nthe weather.  The antlers were provided by Jamie",
+      "seasonalNotes": {
+        "Spring": "Fresh growth makes the mound feel newly shaped—good for wide views and noticing the season turning.",
+        "Summer": "A bright landmark: visit early or late for the best light and to avoid harsh midday sun.",
+        "Autumn": "Great colour season—watch for shifting tones in grass and trees, and listen for migrating birds overhead.",
+        "Winter": "Clear air and low sun create strong silhouettes; a good spot for dramatic skies and long shadows."
+      },
+      "story": "Mount Scotland is a love letter disguised as a landscape feature.\n\nIt’s part family story, part artwork, part viewpoint—Scots pine on a mound, driftwood stags standing watch, and a name that carries a grin.\n\nCome here when the light is changing. The mound turns the farm into a panorama and makes even ordinary weather feel like an event.",
       "tags": [
         "Landmarks"
       ]

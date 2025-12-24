@@ -150,7 +150,11 @@
     <dialog class="modal" id="modal">
       <div class="modal__header">
         <div class="modal__title" id="modalTitle"></div>
-        <button class="btn btn--ghost" id="modalClose" type="button">Close</button>
+        <div class="modal__headerActions">
+          <button class="btn btn--ghost btn--small" id="modalPrevFeature" type="button">Prev</button>
+          <button class="btn btn--ghost btn--small" id="modalNextFeature" type="button">Next</button>
+          <button class="btn btn--ghost" id="modalClose" type="button">Close</button>
+        </div>
       </div>
       <div class="modal__body">
         <div class="modal__media" aria-label="Feature photos">
@@ -196,6 +200,11 @@
         </div>
 
         <div class="modal__section">
+          <div class="modal__sectionTitle">About this feature</div>
+          <div class="prose" id="modalDesc"></div>
+        </div>
+
+        <div class="modal__section">
           <div class="modal__sectionTitle">Story</div>
           <div class="prose" id="modalNarrative"></div>
         </div>
@@ -205,10 +214,6 @@
           <div class="seasonal" id="modalSeasonal"></div>
         </div>
 
-        <details class="modal__section details" id="originalTextWrap">
-          <summary class="details__summary">Show the original extracted text</summary>
-          <div class="prose" id="modalText"></div>
-        </details>
       </div>
     </dialog>
 
