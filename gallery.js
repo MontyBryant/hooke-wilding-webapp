@@ -79,7 +79,7 @@ function main() {
         return `<article class="gal-card" role="button" tabindex="0" data-gal-idx="${escapeHtml(String(idx))}" aria-label="Open image ${escapeHtml(
           label
         )}" data-gal-category="${escapeHtml(im.category)}">
-          <img class="gal-card__img" src="./${escapeHtml(im.src)}" alt="" loading="lazy" />
+          <img class="gal-card__img" src="${escapeHtml(im.src)}" alt="" loading="lazy" />
         </article>`;
       })
       .join("");
@@ -88,7 +88,7 @@ function main() {
   function openModalFor(im) {
     const label = im.label || im.src.split("/").pop();
     $modalTitle.textContent = label;
-    $modalImg.src = `./${im.src}`;
+    $modalImg.src = im.src;
     $modalImg.alt = label;
     $modalCap.textContent = `${im.category} · ${im.src}`;
     if (!$modal.open) $modal.showModal();

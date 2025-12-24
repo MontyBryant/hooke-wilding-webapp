@@ -3,14 +3,14 @@
   "sourceDir": "/Users/montybryant/Documents/Work/Knowledge Resources/vibecoding/Hooke Almighty",
   "features": [
     {
-      "id": "jh-ww24-info-board-insect-homes",
-      "title": "JH WW24 info Board - Insect Homes",
+      "id": "insect-homes",
+      "title": "Insect Homes",
       "sourcePdf": "JH WW24 info Board - Insect Homes.pdf",
-      "thumb": "assets/features/jh-ww24-info-board-insect-homes/page-001.png",
+      "thumb": "assets/features/insect-homes/page-001.png",
       "pages": [
         {
           "pageNumber": 1,
-          "image": "assets/features/jh-ww24-info-board-insect-homes/page-001.png",
+          "image": "assets/features/insect-homes/page-001.png",
           "width": 1600,
           "height": 1280,
           "textPreview": "You may have noticed these piles of stone\naround the site - they're insect cairns. We\nuse them as markers for the butterfly\ntransept. They're made from waste stone\ndug up from our yard.\nINSECT APOCALYPSE\n Please read 'Silent Earth' -\nit's a revelation about the\nplight of insects and why\nwe need to be concerned\nabout them.\nLEARNING ABOUT INSECTS\nRemember that insects are a vital ingredient in the w\u2026"
@@ -22,14 +22,14 @@
       ]
     },
     {
-      "id": "jh-ww24-info-board-rats",
-      "title": "JH WW24 Info Board - Rats",
+      "id": "rats",
+      "title": "Rats",
       "sourcePdf": "JH WW24 Info Board - Rats.pdf",
-      "thumb": "assets/features/jh-ww24-info-board-rats/page-001.png",
+      "thumb": "assets/features/rats/page-001.png",
       "pages": [
         {
           "pageNumber": 1,
-          "image": "assets/features/jh-ww24-info-board-rats/page-001.png",
+          "image": "assets/features/rats/page-001.png",
           "width": 1600,
           "height": 1132,
           "textPreview": "We think this is a rat hole!!\nWe\u2019re delighted to find that we have rat holes\naround our garden - and embrace them.  They play\na crucial role in our eco-system for example by:\n\u201cWhy do we want certain animals around us and not\nother animals? In new build homes, facilities are made in\nthe cavity to provide bats with a home. At the same time,\nrats are controlled with clamps, glue plates and poision.\u201d\n\u2026"
@@ -41,14 +41,14 @@
       ]
     },
     {
-      "id": "jh-ww24-info-board-standing-stones",
-      "title": "JH WW24 Info Board - Standing Stones",
+      "id": "standing-stones",
+      "title": "Standing Stones",
       "sourcePdf": "JH WW24 Info Board - Standing Stones.pdf",
-      "thumb": "assets/features/jh-ww24-info-board-standing-stones/page-001.png",
+      "thumb": "assets/features/standing-stones/page-001.png",
       "pages": [
         {
           "pageNumber": 1,
-          "image": "assets/features/jh-ww24-info-board-standing-stones/page-001.png",
+          "image": "assets/features/standing-stones/page-001.png",
           "width": 1600,
           "height": 1280,
           "textPreview": "The standing stones were installed\nin September 2020. We chose them\nstraight from the quarry at\nMarnhull Stone near Sturminster\nNewton.\nThe stone is from the Corallian\ngroup of limestones which are\nabout 160 million years old and they\nwere deposited during the Jurassic\nperiod between 145 and 201 million\nyears ago, when the sea level was\nretreating!\nThe stones arrived on an\narticulated lorry\nAt lea\u2026"
@@ -60,14 +60,14 @@
       ]
     },
     {
-      "id": "jh-ww24-info-board-wild-bees-birds",
-      "title": "JH WW24 Info Board - Wild Bees & Birds",
+      "id": "wild-bees-birds",
+      "title": "Wild Bees & Birds",
       "sourcePdf": "JH WW24 Info Board - Wild Bees & Birds.pdf",
-      "thumb": "assets/features/jh-ww24-info-board-wild-bees-birds/page-001.png",
+      "thumb": "assets/features/wild-bees-birds/page-001.png",
       "pages": [
         {
           "pageNumber": 1,
-          "image": "assets/features/jh-ww24-info-board-wild-bees-birds/page-001.png",
+          "image": "assets/features/wild-bees-birds/page-001.png",
           "width": 1600,
           "height": 1132,
           "textPreview": "Wild Bees & Birds\nThese bird boxes were built for swifts but we think\nthey are too low - and the swifts wouldn\u2019t have liked\nthe creeper either.  The first occupants were starlings,\nbut the bees usurped them - European honey bees\n(Apis mellifera).\nHowever, one rather brave or foolish starling returned\nthis year and made his or her nest in one of the holes\nbetween the bees.  It wasn\u2019t a great succes\u2026"
@@ -118,14 +118,14 @@
       ]
     },
     {
-      "id": "ww24-hibernaculum-info-board",
-      "title": "WW24 Hibernaculum Info Board",
+      "id": "hibernaculum",
+      "title": "Hibernaculum",
       "sourcePdf": "WW24 Hibernaculum Info Board.pdf",
-      "thumb": "assets/features/ww24-hibernaculum-info-board/page-001.png",
+      "thumb": "assets/features/hibernaculum/page-001.png",
       "pages": [
         {
           "pageNumber": 1,
-          "image": "assets/features/ww24-hibernaculum-info-board/page-001.png",
+          "image": "assets/features/hibernaculum/page-001.png",
           "width": 1600,
           "height": 1132,
           "textPreview": "It's an underground home that\namphibians and reptiles use\nthroughout winter to protect\nthemselves from the cold.\nThere are lots of frogs, toads and\nnewts in or near our ponds. They\nlove the boggy ground and sunny\nspots.  By creating a hibernaculum\nwe have provided a safe space for\nthem to hibernate over winter.\nHOW WE CREATED THE HIBERNACULUM\nWe lifted an area of turf about 1\nby 2 metres and dug o\u2026"
@@ -137,14 +137,14 @@
       ]
     },
     {
-      "id": "ww24-mount-scotland-info-board",
-      "title": "WW24 Mount Scotland Info Board ",
+      "id": "mount-scotland",
+      "title": "Mount Scotland",
       "sourcePdf": "WW24 Mount Scotland Info Board .pdf",
-      "thumb": "assets/features/ww24-mount-scotland-info-board/page-001.png",
+      "thumb": "assets/features/mount-scotland/page-001.png",
       "pages": [
         {
           "pageNumber": 1,
-          "image": "assets/features/ww24-mount-scotland-info-board/page-001.png",
+          "image": "assets/features/mount-scotland/page-001.png",
           "width": 1600,
           "height": 1280,
           "textPreview": "MOUNT SCOTLAND\nMy husband, Jamie Macdonald, is proud of his\nScottish heritage so we decided to dedicate this\nmound to him.  It includes 3 Scot's Pine trees and 2\ndriftwood stags.  The stags were bought in\nBridport market and made from driftwood which\noriginated in Indonesia - sadly, as a result of the\nhorrendous deforestation  However the wood\nwas drifting for some time before being made into\nscul\u2026"

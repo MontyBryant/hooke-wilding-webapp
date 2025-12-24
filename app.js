@@ -269,7 +269,14 @@ function getEffectiveGallery(feature) {
   const o = loadOverrides(feature.id);
   const g = o && Array.isArray(o.gallery) ? o.gallery : null;
   const base = Array.isArray(feature.gallery) ? feature.gallery : [];
-  return (g || base).filter((x) => x && typeof x === "object" && typeof x.url === "string");
+  const merged = (g ? [...base, ...g] : base).filter((x) => x && typeof x === "object" && typeof x.url === "string");
+  // Deduplicate by url (stable)
+  const seen = new Set();
+  return merged.filter((x) => {
+    if (seen.has(x.url)) return false;
+    seen.add(x.url);
+    return true;
+  });
 }
 
 function guessSeasonalNotes(feature) {
@@ -454,12 +461,12 @@ function main() {
     { featureId: "the-bat-egg", label: "The Bat Egg", xPct: 50.0, yPct: 22.0 },
 
     // Provided coordinates:
-    { featureId: "jh-ww24-info-board-insect-homes", label: "Insect Home", xPct: 12.4, yPct: 26.2 },
-    { featureId: "jh-ww24-info-board-standing-stones", label: "Standing Stones", xPct: 27.3, yPct: 49.4 },
-    { featureId: "jh-ww24-info-board-wild-bees-birds", label: "Wild Bees", xPct: 43.1, yPct: 75.1 },
+    { featureId: "insect-homes", label: "Insect Homes", xPct: 12.4, yPct: 26.2 },
+    { featureId: "standing-stones", label: "Standing Stones", xPct: 27.3, yPct: 49.4 },
+    { featureId: "wild-bees-birds", label: "Wild Bees & Birds", xPct: 43.1, yPct: 75.1 },
     { featureId: "our-sweet-track", label: "Sweet Track", xPct: 88.3, yPct: 68.4 },
-    { featureId: "ww24-hibernaculum-info-board", label: "Hibernaculum", xPct: 92.9, yPct: 56.6 },
-    { featureId: "ww24-mount-scotland-info-board", label: "Mount Scotland", xPct: 40.4, yPct: 23.5 },
+    { featureId: "hibernaculum", label: "Hibernaculum", xPct: 92.9, yPct: 56.6 },
+    { featureId: "mount-scotland", label: "Mount Scotland", xPct: 40.4, yPct: 23.5 },
   ];
 
   function getEffectivePin(feature) {

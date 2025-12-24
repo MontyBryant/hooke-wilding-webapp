@@ -844,6 +844,9 @@ mark{
   overflow-x: auto;
   padding-bottom: 4px;
 }
+.gallery--attached{
+  padding-bottom: 0;
+}
 .thumb{
   border: 1px solid rgba(32,52,44,.14);
   border-radius: 12px;
@@ -862,6 +865,43 @@ mark{
 .thumb.is-active{
   border-color: rgba(58,122,99,.45);
   box-shadow: 0 0 0 4px rgba(58,122,99,.10);
+}
+
+.modal__media{
+  border: 1px solid rgba(32,52,44,.14);
+  border-radius: 16px;
+  overflow: hidden;
+  background: rgba(255,255,255,.55);
+  box-shadow: var(--shadow2);
+}
+.modal__mediaImg{
+  width: 100%;
+  height: auto;
+  display:block;
+  background: rgba(255,255,255,.7);
+}
+.modal__mediaBar{
+  border-top: 1px solid rgba(32,52,44,.12);
+  background: rgba(251,247,239,.72);
+  padding: 10px;
+}
+.modal__mediaBarTop{
+  display:flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+.modal__mediaBarTitle{
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  font-size: 11px;
+  color: var(--muted);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.modal__mediaBarHint{
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  font-size: 12px;
 }
 
 /* Admin gallery list */

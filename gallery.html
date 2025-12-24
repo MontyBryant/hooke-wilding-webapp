@@ -8,7 +8,8 @@
       name="description"
       content="A gallery of Hooke Farm wilding photos and artwork (excluding the Dorset field guide images)."
     />
-    <link rel="stylesheet" href="./styles.css" />
+    <!-- Cache-bust for GitHub Pages (helps avoid stale CSS/JS after deploy) -->
+    <link rel="stylesheet" href="./styles.css?v=2025-12-24" />
   </head>
   <body>
     <header class="topbar">
@@ -74,8 +75,8 @@
       </div>
     </dialog>
 
-    <script src="./data/gallery-manifest.js"></script>
-    <script src="./gallery.js"></script>
+    <script src="./data/gallery-manifest.js?v=2025-12-24"></script>
+    <script src="./gallery.js?v=2025-12-24"></script>
   </body>
 </html>
 

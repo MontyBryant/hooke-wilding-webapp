@@ -119,7 +119,16 @@
         <button class="btn btn--ghost" id="modalClose" type="button">Close</button>
       </div>
       <div class="modal__body">
-        <img class="board board--hero" id="modalBoardImg" alt="" loading="lazy" />
+        <div class="modal__media" aria-label="Feature photos">
+          <img class="modal__mediaImg" id="modalBoardImg" alt="" loading="lazy" />
+          <div class="modal__mediaBar">
+            <div class="modal__mediaBarTop">
+              <div class="modal__mediaBarTitle">Photos</div>
+              <div class="modal__mediaBarHint muted">Click a thumbnail to swap the main image.</div>
+            </div>
+            <div class="gallery gallery--attached" id="modalGallery" aria-label="Photo gallery"></div>
+          </div>
+        </div>
 
         <div class="modal__section">
           <div class="modal__sectionTitle">Tags</div>
@@ -146,12 +155,6 @@
         <div class="modal__section">
           <div class="modal__sectionTitle">Seasonal notes</div>
           <div class="seasonal" id="modalSeasonal"></div>
-        </div>
-
-        <div class="modal__section">
-          <div class="modal__sectionTitle">Photos</div>
-          <div class="gallery" id="modalGallery" aria-label="Photo gallery"></div>
-          <div class="caption muted">Tip: click a thumbnail to swap the main image above.</div>
         </div>
 
         <details class="modal__section details" id="originalTextWrap">
