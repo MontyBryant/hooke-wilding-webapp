@@ -209,6 +209,17 @@ function main() {
     sort: "date_desc",
   };
 
+  function updateClearVisibility() {
+    const hasActive =
+      !!String(state.q || "").trim() ||
+      state.tags.size > 0 ||
+      state.types.size > 0 ||
+      !!String(state.from || "").trim() ||
+      !!String(state.to || "").trim() ||
+      state.sort !== "date_desc";
+    $clear.hidden = !hasActive;
+  }
+
   function allTags() {
     return unique(all.flatMap((it) => it.tags || [])).sort((a, b) => a.localeCompare(b));
   }
@@ -292,6 +303,8 @@ function main() {
         )}</button>`;
       })
       .join("");
+
+    updateClearVisibility();
   }
 
   function renderGrid() {
@@ -429,18 +442,22 @@ function main() {
   // Events
   $search.addEventListener("input", (e) => {
     state.q = e.target.value || "";
+    updateClearVisibility();
     renderGrid();
   });
   $sort.addEventListener("change", (e) => {
     state.sort = e.target.value || "date_desc";
+    updateClearVisibility();
     renderGrid();
   });
   $dateFrom.addEventListener("change", (e) => {
     state.from = e.target.value || "";
+    updateClearVisibility();
     renderGrid();
   });
   $dateTo.addEventListener("change", (e) => {
     state.to = e.target.value || "";
+    updateClearVisibility();
     renderGrid();
   });
   $clear.addEventListener("click", resetFilters);

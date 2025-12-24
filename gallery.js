@@ -59,6 +59,9 @@ function main() {
         )}</button>`;
       })
       .join("");
+
+    // Show Clear once there is something to clear (category selection or search).
+    $clear.hidden = state.cats.size === 0 && !String(state.q || "").trim();
   }
 
   function renderGrid() {
@@ -101,6 +104,7 @@ function main() {
   // Events
   $search.addEventListener("input", (e) => {
     state.q = e.target.value || "";
+    $clear.hidden = state.cats.size === 0 && !String(state.q || "").trim();
     renderGrid();
   });
 

@@ -75,6 +75,15 @@ function main() {
 
   const state = { q: "", groups: new Set(), habitats: new Set(), seasons: new Set() };
 
+  function updateClearVisibility() {
+    const hasActive =
+      !!String(state.q || "").trim() ||
+      state.groups.size > 0 ||
+      state.habitats.size > 0 ||
+      state.seasons.size > 0;
+    $clear.hidden = !hasActive;
+  }
+
   function matches(s) {
     const q = normalize(state.q);
     const hay = normalize(
@@ -124,6 +133,8 @@ function main() {
         )}</button>`;
       })
       .join("");
+
+    updateClearVisibility();
   }
 
   function renderGrid() {
@@ -265,6 +276,7 @@ function main() {
   // Events
   $search.addEventListener("input", (e) => {
     state.q = e.target.value || "";
+    updateClearVisibility();
     renderGrid();
   });
 
@@ -323,6 +335,7 @@ function main() {
     state.habitats.clear();
     state.seasons.clear();
     $search.value = "";
+    updateClearVisibility();
     renderFilters();
     renderGrid();
   });

@@ -365,6 +365,7 @@ function main() {
   const $resultMeta = el("resultMeta");
   const $quickChips = el("quickChips");
   const $btnTour = el("btnTour");
+  const $clearFilters = document.getElementById("clearFilters");
 
   const $modal = el("modal");
   const $modalTitle = el("modalTitle");
@@ -760,6 +761,9 @@ function main() {
       .slice(0, Math.min(6, tags.length))
       .map((t) => `<button class="chip" type="button" data-tag="${escapeHtml(t)}">${escapeHtml(t)}</button>`)
       .join("");
+
+    // Clear button should only appear once a tag filter is active.
+    if ($clearFilters) $clearFilters.hidden = state.tags.size === 0;
   }
 
   function renderGrid() {
@@ -1679,7 +1683,6 @@ function main() {
   });
 
   // Clear filters
-  const $clearFilters = document.getElementById("clearFilters");
   if ($clearFilters) {
     $clearFilters.addEventListener("click", () => {
       state.q = "";

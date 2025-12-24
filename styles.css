@@ -137,6 +137,19 @@ body:not(.is-admin) .tag-pill__x{ display: none; }
   border-color: rgba(32,52,44,.18);
   box-shadow: none;
 }
+.btn--faint{
+  opacity: .62;
+  border-color: rgba(32,52,44,.14);
+  background: rgba(255,255,255,.45);
+  box-shadow: none;
+}
+.btn--faint:hover{
+  opacity: .92;
+  background: rgba(255,255,255,.65);
+}
+.btn--faint:active{
+  opacity: 1;
+}
 .btn--small{
   padding: 7px 10px;
   font-size: 12px;
