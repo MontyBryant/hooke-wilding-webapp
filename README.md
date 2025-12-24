@@ -13,6 +13,9 @@ An **offline, interactive guide** to Hooke Farm’s wilding features — built f
   - Browse a curated starter dataset of habitats/species.
   - Filter by group/habitat/season and search.
   - Species modal includes photo attribution and sources.
+- **Watch & Read (videos + blogs)**: `content.html` + `content.js`
+  - Curated library with search, filters, and sorting.
+  - YouTube videos play in a modal; blog links open in a new tab.
 - **About page**: `about.html`
 
 ## Run locally
@@ -90,9 +93,21 @@ If your environment has SSL certificate issues, the script supports an insecure 
 HOOKE_INSECURE_SSL=1 python3 tools/fetch_commons_covers.py
 ```
 
+### Populate YouTube publish dates for Watch & Read (optional)
+
+YouTube publish dates are not available via oEmbed and can’t be reliably scraped in-browser (CORS), so they’re best added at build/curation time.
+
+1. Create a YouTube Data API v3 key
+2. Run:
+
+```bash
+export YOUTUBE_API_KEY="YOUR_KEY"
+python3 tools/build_content_youtube_dates.py --write
+```
+
 ## Repo layout (high-level)
 
-- **Pages**: `index.html`, `field-guide.html`, `about.html`
+- **Pages**: `index.html`, `field-guide.html`, `content.html`, `about.html`
 - **Logic**: `app.js`, `field-guide.js`
 - **Styles**: `styles.css`
 - **Data**: `data/`

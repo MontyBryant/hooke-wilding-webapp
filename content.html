@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Watch &amp; Read — Hooke Farm Wilding Portal</title>
+    <meta
+      name="description"
+      content="A curated library of videos and articles relating to wilding at Hooke Farm — searchable and filterable."
+    />
+    <link rel="stylesheet" href="./styles.css?v=2025-12-24" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="topbar__inner">
+        <div class="brand">
+          <div class="brand__kicker">Hooke Farm</div>
+          <div class="brand__title">Wilding Portal</div>
+        </div>
+        <div class="topbar__actions">
+          <a class="btn btn--ghost" href="./index.html">Back to map</a>
+          <a class="btn btn--ghost" href="./field-guide.html">Living Dorset Field Guide</a>
+          <a class="btn btn--ghost" href="./gallery.html">Gallery</a>
+          <a class="btn btn--ghost" href="./about.html">About</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="layout">
+      <!-- Layout override: no full-width hero row; just sidebar + content -->
+      <style>
+        main.layout {
+          grid-template-columns: 360px 1fr;
+          grid-template-areas: "sidebar content";
+        }
+      </style>
+
+      <aside class="sidebar" aria-label="Content filters">
+        <div class="panel">
+          <div class="fg-title">Watch &amp; Read</div>
+          <div class="panel__meta fg-intro">
+            A curated library of Hooke wilding talks, films, and writing. Use the filters below to explore by topic,
+            type, and date.
+          </div>
+          <div class="caption muted">Tip: click any video to play it in a modal (no page navigation).</div>
+
+          <div class="divider"></div>
+
+          <div class="panel__title">Explore content</div>
+
+          <label class="field">
+            <span class="field__label">Search</span>
+            <input id="contentSearch" class="input" type="search" placeholder="e.g. wilding weekend, scything, Hooke…" />
+          </label>
+
+          <div class="divider"></div>
+
+          <div class="panel__subtitle">Type</div>
+          <div class="taglist" id="contentTypes" role="list"></div>
+
+          <div class="divider"></div>
+
+          <div class="panel__row">
+            <div class="panel__subtitle">Tags</div>
+            <button class="btn btn--small btn--ghost" id="contentClear" type="button">Clear</button>
+          </div>
+          <div class="taglist" id="contentTags" role="list"></div>
+
+          <div class="divider"></div>
+
+          <div class="panel__subtitle">Date</div>
+          <div class="content-date">
+            <label class="field">
+              <span class="field__label">From</span>
+              <input id="dateFrom" class="input" type="date" />
+            </label>
+            <label class="field">
+              <span class="field__label">To</span>
+              <input id="dateTo" class="input" type="date" />
+            </label>
+          </div>
+
+          <div class="divider"></div>
+
+          <label class="field">
+            <span class="field__label">Sort</span>
+            <select id="contentSort" class="input">
+              <option value="date_desc" selected>Newest first</option>
+              <option value="date_asc">Oldest first</option>
+              <option value="title_asc">Title A → Z</option>
+            </select>
+          </label>
+
+          <div class="divider"></div>
+          <div class="panel__meta" id="contentMeta"></div>
+        </div>
+      </aside>
+
+      <section class="content" aria-label="Content library">
+        <div class="content-stack">
+          <section class="content-featuredPane" aria-label="Featured">
+            <div class="content-featuredPane__label">Featured</div>
+            <button class="card content-featured content-featured--wide" id="featuredCard" type="button" aria-label="Play featured video">
+              <img class="card__img" id="featuredThumb" alt="" loading="eager" />
+              <div class="card__body">
+                <div class="card__title" id="featuredTitle">Featured video</div>
+                <div class="card__sub" id="featuredSub">Loading…</div>
+                <div class="card__chips" id="featuredTags"></div>
+              </div>
+            </button>
+          </section>
+
+          <div class="grid" id="contentGrid" aria-live="polite"></div>
+        </div>
+      </section>
+    </main>
+
+    <dialog class="modal" id="videoModal" aria-label="Video player">
+      <div class="modal__header">
+        <div class="modal__title" id="videoModalTitle">Video</div>
+        <div class="video-modal__actions">
+          <a class="btn btn--ghost btn--small" id="videoModalOpen" href="#" target="_blank" rel="noopener">Open on YouTube</a>
+          <button class="btn btn--ghost" id="videoModalClose" type="button">Close</button>
+        </div>
+      </div>
+      <div class="modal__body">
+        <div class="video-embed">
+          <iframe
+            id="videoFrame"
+            class="video-embed__frame"
+            title="YouTube video player"
+            src=""
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="caption muted" id="videoModalMeta"></div>
+      </div>
+    </dialog>
+
+    <script src="./data/content-data.js?v=2025-12-24"></script>
+    <script src="./content.js?v=2025-12-24"></script>
+  </body>
+</html>
+
+
