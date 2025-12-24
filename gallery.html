@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gallery — Hooke Farm Wilding Portal</title>
+    <meta
+      name="description"
+      content="A gallery of Hooke Farm wilding photos and artwork (excluding the Dorset field guide images)."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="topbar__inner">
+        <div class="brand">
+          <div class="brand__kicker">Hooke Farm</div>
+          <div class="brand__title">Wilding Portal</div>
+        </div>
+        <div class="topbar__actions">
+          <a class="btn btn--ghost" href="./index.html">Back to map</a>
+          <a class="btn btn--ghost" href="./field-guide.html">Living Dorset Field Guide</a>
+          <a class="btn btn--ghost" href="./about.html">About</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="layout" style="grid-template-columns: 360px 1fr; grid-template-areas: 'sidebar content';">
+      <aside class="sidebar" aria-label="Gallery filters">
+        <div class="panel">
+          <div class="fg-title">Gallery</div>
+          <div class="panel__meta fg-intro">
+            All Hooke/wilding-related images bundled with this site (excluding <code>assets/field-guide/</code>).
+          </div>
+
+          <div class="divider"></div>
+
+          <label class="field">
+            <span class="field__label">Search filenames</span>
+            <input id="galSearch" class="input" type="search" placeholder="e.g. bat, hibernaculum, IMG_..." />
+          </label>
+
+          <div class="divider"></div>
+
+          <div class="panel__row">
+            <div class="panel__subtitle">Category</div>
+            <button class="btn btn--small btn--ghost" id="galClear" type="button">Clear</button>
+          </div>
+          <div class="taglist" id="galCats" role="list"></div>
+
+          <div class="divider"></div>
+
+          <div class="panel__meta" id="galMeta"></div>
+          <div class="caption muted">
+            Tip: the site can’t “discover” new files automatically in a browser. If you add images to the repo, regenerate
+            the manifest in <code>data/gallery-manifest.js</code>.
+          </div>
+        </div>
+      </aside>
+
+      <section class="content" aria-label="Gallery images">
+        <div class="gal-grid" id="galGrid" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <dialog class="modal" id="galModal">
+      <div class="modal__header">
+        <div class="modal__title" id="galModalTitle">Image</div>
+        <button class="btn btn--ghost" id="galModalClose" type="button">Close</button>
+      </div>
+      <div class="modal__body">
+        <img class="board board--hero" id="galModalImg" alt="" loading="lazy" />
+        <div class="caption muted" id="galModalCap"></div>
+      </div>
+    </dialog>
+
+    <script src="./data/gallery-manifest.js"></script>
+    <script src="./gallery.js"></script>
+  </body>
+</html>
+
+
