@@ -154,11 +154,25 @@
       </div>
       <div class="modal__body">
         <div class="modal__media" aria-label="Feature photos">
-          <img class="modal__mediaImg" id="modalBoardImg" alt="" loading="lazy" />
+          <div class="lightbox" aria-label="Photo viewer">
+            <div class="lightbox__stage" id="galleryStage">
+              <img class="modal__mediaImg lightbox__img" id="modalBoardImg" alt="" loading="lazy" />
+              <button class="lightbox__nav lightbox__nav--prev" id="galleryPrev" type="button" aria-label="Previous photo">
+                ‹
+              </button>
+              <button class="lightbox__nav lightbox__nav--next" id="galleryNext" type="button" aria-label="Next photo">
+                ›
+              </button>
+            </div>
+          </div>
           <div class="modal__mediaBar">
             <div class="modal__mediaBarTop">
               <div class="modal__mediaBarTitle">Photos</div>
-              <div class="modal__mediaBarHint muted">Click a thumbnail to swap the main image.</div>
+              <div class="modal__mediaBarHint muted">
+                <span id="galleryCounter" aria-live="polite">—</span>
+                <span aria-hidden="true"> · </span>
+                Use arrows or click thumbnails.
+              </div>
             </div>
             <div class="gallery gallery--attached" id="modalGallery" aria-label="Photo gallery"></div>
           </div>

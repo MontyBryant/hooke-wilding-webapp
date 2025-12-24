@@ -44,6 +44,7 @@ Serve the repo root directory and open `index.html`.
 - **Source JSON (human-readable)**: `data/features.json`
   - `features-data.js` is marked “Auto-generated from `data/features.json`”.
   - If you edit `features.json`, you’ll need to update/regenerate `features-data.js` to match.
+  - If you add images into `assets/features/<feature-id>/`, you’ll also need to regenerate `features-data.js` (the browser can’t auto-scan folders at runtime in a static site).
 
 Feature fields used by the UI include:
 - **`id`** (string): stable unique id (also used for local overrides)

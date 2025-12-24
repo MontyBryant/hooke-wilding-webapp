@@ -1,7 +1,262 @@
 {
-  "generatedAt": "2025-12-21T18:22:31Z",
+  "generatedAt": "2025-12-24T00:00:00Z",
   "sourceDir": "/Users/montybryant/Documents/Work/Knowledge Resources/vibecoding/Hooke Almighty",
   "features": [
+    {
+      "id": "dead-hedge",
+      "title": "Dead Hedge",
+      "sourcePdf": "",
+      "thumb": "assets/field-guide/placeholder.svg",
+      "pages": [
+        {
+          "pageNumber": 1,
+          "image": "assets/field-guide/placeholder.svg",
+          "width": 0,
+          "height": 0,
+          "textPreview": "Coming soon."
+        }
+      ],
+      "text": "",
+      "tags": []
+    },
+    {
+      "id": "fallen-tree",
+      "title": "Fallen Tree",
+      "sourcePdf": "",
+      "thumb": "assets/field-guide/placeholder.svg",
+      "pages": [
+        {
+          "pageNumber": 1,
+          "image": "assets/field-guide/placeholder.svg",
+          "width": 0,
+          "height": 0,
+          "textPreview": "Coming soon."
+        }
+      ],
+      "text": "",
+      "tags": []
+    },
+    {
+      "id": "giant-chair",
+      "title": "Giant Chair",
+      "sourcePdf": "",
+      "thumb": "assets/field-guide/placeholder.svg",
+      "pages": [
+        {
+          "pageNumber": 1,
+          "image": "assets/field-guide/placeholder.svg",
+          "width": 0,
+          "height": 0,
+          "textPreview": "Coming soon."
+        }
+      ],
+      "text": "",
+      "tags": []
+    },
+    {
+      "id": "hen-henge",
+      "title": "Hen Henge",
+      "sourcePdf": "",
+      "thumb": "assets/field-guide/placeholder.svg",
+      "pages": [
+        {
+          "pageNumber": 1,
+          "image": "assets/field-guide/placeholder.svg",
+          "width": 0,
+          "height": 0,
+          "textPreview": "Coming soon."
+        }
+      ],
+      "text": "",
+      "tags": []
+    },
+    {
+      "id": "ichthyosaurus",
+      "title": "Ichthyosaurus",
+      "sourcePdf": "",
+      "thumb": "assets/field-guide/placeholder.svg",
+      "pages": [
+        {
+          "pageNumber": 1,
+          "image": "assets/field-guide/placeholder.svg",
+          "width": 0,
+          "height": 0,
+          "textPreview": "Coming soon."
+        }
+      ],
+      "text": "",
+      "tags": []
+    },
+    {
+      "id": "green-roof",
+      "title": "Green roof",
+      "sourcePdf": "",
+      "thumb": "assets/field-guide/placeholder.svg",
+      "pages": [
+        {
+          "pageNumber": 1,
+          "image": "assets/field-guide/placeholder.svg",
+          "width": 0,
+          "height": 0,
+          "textPreview": "Coming soon."
+        }
+      ],
+      "text": "",
+      "tags": []
+    },
+    {
+      "id": "barn-owl-box",
+      "title": "Barn Owl Box",
+      "sourcePdf": "",
+      "thumb": "assets/field-guide/placeholder.svg",
+      "pages": [
+        {
+          "pageNumber": 1,
+          "image": "assets/field-guide/placeholder.svg",
+          "width": 0,
+          "height": 0,
+          "textPreview": "Coming soon."
+        }
+      ],
+      "text": "",
+      "tags": []
+    },
+    {
+      "id": "monkey-puzzle",
+      "title": "Monkey Puzzle",
+      "sourcePdf": "",
+      "thumb": "assets/field-guide/placeholder.svg",
+      "pages": [
+        {
+          "pageNumber": 1,
+          "image": "assets/field-guide/placeholder.svg",
+          "width": 0,
+          "height": 0,
+          "textPreview": "Coming soon."
+        }
+      ],
+      "text": "",
+      "tags": []
+    },
+    {
+      "id": "tree-lith",
+      "title": "Tree Lith",
+      "sourcePdf": "",
+      "thumb": "assets/field-guide/placeholder.svg",
+      "pages": [
+        {
+          "pageNumber": 1,
+          "image": "assets/field-guide/placeholder.svg",
+          "width": 0,
+          "height": 0,
+          "textPreview": "Coming soon."
+        }
+      ],
+      "text": "",
+      "tags": []
+    },
+    {
+      "id": "toad-pond",
+      "title": "Toad Pond",
+      "sourcePdf": "",
+      "thumb": "assets/field-guide/placeholder.svg",
+      "pages": [
+        {
+          "pageNumber": 1,
+          "image": "assets/field-guide/placeholder.svg",
+          "width": 0,
+          "height": 0,
+          "textPreview": "Coming soon."
+        }
+      ],
+      "text": "",
+      "tags": []
+    },
+    {
+      "id": "old-mill-pond",
+      "title": "Old Mill Pond",
+      "sourcePdf": "",
+      "thumb": "assets/field-guide/placeholder.svg",
+      "pages": [
+        {
+          "pageNumber": 1,
+          "image": "assets/field-guide/placeholder.svg",
+          "width": 0,
+          "height": 0,
+          "textPreview": "Coming soon."
+        }
+      ],
+      "text": "",
+      "tags": []
+    },
+    {
+      "id": "orchard",
+      "title": "Orchard",
+      "sourcePdf": "",
+      "thumb": "assets/field-guide/placeholder.svg",
+      "pages": [
+        {
+          "pageNumber": 1,
+          "image": "assets/field-guide/placeholder.svg",
+          "width": 0,
+          "height": 0,
+          "textPreview": "Coming soon."
+        }
+      ],
+      "text": "",
+      "tags": []
+    },
+    {
+      "id": "public-bridleway",
+      "title": "Public Bridleway",
+      "sourcePdf": "",
+      "thumb": "assets/field-guide/placeholder.svg",
+      "pages": [
+        {
+          "pageNumber": 1,
+          "image": "assets/field-guide/placeholder.svg",
+          "width": 0,
+          "height": 0,
+          "textPreview": "Coming soon."
+        }
+      ],
+      "text": "",
+      "tags": []
+    },
+    {
+      "id": "wild-veg-garden",
+      "title": "Wild Veg Garden",
+      "sourcePdf": "",
+      "thumb": "assets/field-guide/placeholder.svg",
+      "pages": [
+        {
+          "pageNumber": 1,
+          "image": "assets/field-guide/placeholder.svg",
+          "width": 0,
+          "height": 0,
+          "textPreview": "Coming soon."
+        }
+      ],
+      "text": "",
+      "tags": []
+    },
+    {
+      "id": "wildflower-meadow",
+      "title": "Wildflower Meadow",
+      "sourcePdf": "",
+      "thumb": "assets/field-guide/placeholder.svg",
+      "pages": [
+        {
+          "pageNumber": 1,
+          "image": "assets/field-guide/placeholder.svg",
+          "width": 0,
+          "height": 0,
+          "textPreview": "Coming soon."
+        }
+      ],
+      "text": "",
+      "tags": []
+    },
     {
       "id": "insect-homes",
       "title": "Insect Homes",

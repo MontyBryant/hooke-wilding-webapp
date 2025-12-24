@@ -376,6 +376,9 @@ function main() {
   const $modalClose = el("modalClose");
   const $modalSeasonal = el("modalSeasonal");
   const $modalGallery = el("modalGallery");
+  const $galleryPrev = el("galleryPrev");
+  const $galleryNext = el("galleryNext");
+  const $galleryCounter = el("galleryCounter");
   const $tourPanel = el("tourPanel");
   const $tourLayer = el("tourLayer");
   const $tourPath = el("tourPath");
@@ -462,9 +465,24 @@ function main() {
     { featureId: "the-bat-egg", label: "The Bat Egg", xPct: 50.0, yPct: 22.0 },
 
     // Provided coordinates:
+    { featureId: "dead-hedge", label: "Dead Hedge", xPct: 19.5, yPct: 80.9 },
+    { featureId: "fallen-tree", label: "Fallen Tree", xPct: 75.6, yPct: 57.1 },
+    { featureId: "giant-chair", label: "Giant Chair", xPct: 25.2, yPct: 16.7 },
+    { featureId: "barn-owl-box", label: "Barn Owl Box", xPct: 27.5, yPct: 29.0 },
+    { featureId: "hen-henge", label: "Hen Henge", xPct: 83.1, yPct: 76.1 },
+    { featureId: "ichthyosaurus", label: "Ichthyosaurus", xPct: 78.4, yPct: 53.0 },
     { featureId: "insect-homes", label: "Insect Homes", xPct: 12.4, yPct: 26.2 },
+    { featureId: "monkey-puzzle", label: "Monkey Puzzle", xPct: 31.8, yPct: 37.5 },
+    { featureId: "old-mill-pond", label: "Old Mill Pond", xPct: 74.7, yPct: 46.0 },
+    { featureId: "orchard", label: "Orchard", xPct: 11.3, yPct: 57.1 },
+    { featureId: "public-bridleway", label: "Public Bridleway", xPct: 17.0, yPct: 52.9 },
     { featureId: "standing-stones", label: "Standing Stones", xPct: 27.3, yPct: 49.4 },
+    { featureId: "tree-lith", label: "Tree Lith", xPct: 27.2, yPct: 55.4 },
+    { featureId: "toad-pond", label: "Toad Pond", xPct: 53.2, yPct: 70.3 },
+    { featureId: "wild-veg-garden", label: "Wild Veg Garden", xPct: 51.9, yPct: 46.5 },
+    { featureId: "green-roof", label: "Green roof", xPct: 61.9, yPct: 79.2 },
     { featureId: "wild-bees-birds", label: "Wild Bees & Birds", xPct: 43.1, yPct: 75.1 },
+    { featureId: "wildflower-meadow", label: "Wildflower Meadow", xPct: 49.4, yPct: 29.7 },
     { featureId: "our-sweet-track", label: "Sweet Track", xPct: 88.3, yPct: 68.4 },
     { featureId: "hibernaculum", label: "Hibernaculum", xPct: 92.9, yPct: 56.6 },
     { featureId: "mount-scotland", label: "Mount Scotland", xPct: 40.4, yPct: 23.5 },
@@ -823,23 +841,79 @@ function main() {
       .join("");
   }
 
+  // --- Modal photo gallery (lightbox) ---
+  const galleryState = { items: [], idx: 0, title: "" };
+
+  function isTypingInField() {
+    const a = document.activeElement;
+    if (!a) return false;
+    const tag = String(a.tagName || "").toLowerCase();
+    if (tag === "input" || tag === "textarea" || tag === "select") return true;
+    if (a.isContentEditable) return true;
+    return false;
+  }
+
+  function setGalleryIndex(nextIdx) {
+    const items = galleryState.items;
+    if (!items || items.length === 0) {
+      $galleryCounter.textContent = "—";
+      $galleryPrev.disabled = true;
+      $galleryNext.disabled = true;
+      $galleryPrev.hidden = true;
+      $galleryNext.hidden = true;
+      return;
+    }
+
+    const len = items.length;
+    const idx = ((nextIdx % len) + len) % len;
+    galleryState.idx = idx;
+
+    const src = items[idx].src;
+    $modalBoardImg.src = src;
+    $modalBoardImg.alt = galleryState.title ? `${galleryState.title} photo ${idx + 1} of ${len}` : `Photo ${idx + 1} of ${len}`;
+
+    // Thumbnails
+    Array.from($modalGallery.querySelectorAll(".thumb[data-idx]")).forEach((t) => {
+      t.classList.toggle("is-active", Number(t.dataset.idx) === idx);
+    });
+    const activeThumb = $modalGallery.querySelector(`.thumb[data-idx="${idx}"]`);
+    if (activeThumb && typeof activeThumb.scrollIntoView === "function") {
+      activeThumb.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "nearest" });
+    }
+
+    // Counter + nav
+    $galleryCounter.textContent = `${idx + 1} / ${len}`;
+    const multi = len > 1;
+    $galleryPrev.disabled = !multi;
+    $galleryNext.disabled = !multi;
+    $galleryPrev.hidden = !multi;
+    $galleryNext.hidden = !multi;
+  }
+
   function renderGallery(feature, activeUrl) {
     const baseImg = (feature.pages && feature.pages[0] && feature.pages[0].image) || feature.thumb || "";
     const gallery = getEffectiveGallery(feature);
-    const items = [{ id: "board", url: baseImg }, ...gallery];
+    const rawItems = [{ id: "board", url: baseImg }, ...gallery].filter((it) => it && it.url);
+    const items = rawItems.map((it) => ({ id: it.id || "", src: resolveImg(it.url) }));
     const active = activeUrl || resolveImg(baseImg);
+    const activeIdx = Math.max(0, items.findIndex((it) => it.src === active));
+
+    galleryState.items = items;
+    galleryState.idx = activeIdx;
+    galleryState.title = getEffectiveTitle(feature);
+
     $modalGallery.innerHTML = items
-      .filter((it) => it && it.url)
-      .map((it) => {
-        const src = resolveImg(it.url);
-        const isActive = src === active;
-        return `<button class="thumb ${isActive ? "is-active" : ""}" type="button" data-src="${escapeHtml(
-          src
-        )}">
-          <img src="${src}" alt="" loading="lazy" />
+      .map((it, idx) => {
+        const isActive = idx === activeIdx;
+        return `<button class="thumb ${isActive ? "is-active" : ""}" type="button" data-idx="${escapeHtml(String(idx))}" data-src="${escapeHtml(
+          it.src
+        )}" aria-label="Open photo ${escapeHtml(String(idx + 1))}">
+          <img src="${it.src}" alt="" loading="lazy" />
         </button>`;
       })
       .join("");
+
+    setGalleryIndex(activeIdx);
   }
 
   function updateTourUI() {
@@ -1642,14 +1716,36 @@ function main() {
     openFeature(id);
   });
 
-  // Gallery click: swap main image
+  // Gallery click: swap main image (thumbnails)
   $modalGallery.addEventListener("click", (e) => {
-    const btn = e.target.closest(".thumb[data-src]");
+    const btn = e.target.closest(".thumb[data-idx]");
     if (!btn) return;
-    const src = btn.dataset.src;
-    if (!src) return;
-    $modalBoardImg.src = src;
-    Array.from($modalGallery.querySelectorAll(".thumb")).forEach((t) => t.classList.toggle("is-active", t === btn));
+    const idx = Number(btn.dataset.idx);
+    if (!Number.isFinite(idx)) return;
+    setGalleryIndex(idx);
+  });
+
+  $galleryPrev.addEventListener("click", () => {
+    if (!$modal.open) return;
+    setGalleryIndex(galleryState.idx - 1);
+  });
+  $galleryNext.addEventListener("click", () => {
+    if (!$modal.open) return;
+    setGalleryIndex(galleryState.idx + 1);
+  });
+
+  // Keyboard navigation (left/right) while modal is open.
+  document.addEventListener("keydown", (e) => {
+    if (!$modal.open) return;
+    if (isTypingInField()) return;
+    if (!galleryState.items || galleryState.items.length < 2) return;
+    if (e.key === "ArrowLeft") {
+      e.preventDefault();
+      setGalleryIndex(galleryState.idx - 1);
+    } else if (e.key === "ArrowRight") {
+      e.preventDefault();
+      setGalleryIndex(galleryState.idx + 1);
+    }
   });
 
   function addTagFromInput() {

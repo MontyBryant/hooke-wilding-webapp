@@ -18,9 +18,44 @@ from pathlib import Path
 
 
 IMAGE_EXTS = {".png", ".jpg", ".jpeg", ".webp", ".gif", ".svg"}
+PLACEHOLDER_IMG = "assets/field-guide/placeholder.svg"
 
 
-def _auto_gallery_for_feature(repo_root: Path, feature_id: str) -> list[dict]:
+def _auto_primary_image_for_feature(repo_root: Path, feature_id: str) -> Path | None:
+    """
+    Pick a "primary/board" image for a feature folder, if present.
+
+    Priority:
+      1) page-001.png (info-board render)
+      2) thumb.png (explicit cover)
+      3) First image file in the folder (sorted by name)
+    """
+    folder = repo_root / "assets" / "features" / feature_id
+    if not folder.exists() or not folder.is_dir():
+        return None
+
+    preferred = [folder / "page-001.png", folder / "thumb.png"]
+    for p in preferred:
+        if p.exists() and p.is_file() and p.suffix.lower() in IMAGE_EXTS:
+            return p
+
+    imgs: list[Path] = []
+    for p in folder.iterdir():
+        if not p.is_file():
+            continue
+        if p.name.startswith("."):
+            continue
+        if p.suffix.lower() not in IMAGE_EXTS:
+            continue
+        imgs.append(p)
+
+    if not imgs:
+        return None
+    imgs = sorted(imgs, key=lambda p: p.name.lower())
+    return imgs[0]
+
+
+def _auto_gallery_for_feature(repo_root: Path, feature_id: str, exclude_names: set[str] | None = None) -> list[dict]:
     """
     Collect additional images from `assets/features/<feature_id>/`.
 
@@ -31,6 +66,7 @@ def _auto_gallery_for_feature(repo_root: Path, feature_id: str) -> list[dict]:
     if not folder.exists() or not folder.is_dir():
         return []
 
+    exclude_names = exclude_names or set()
     imgs: list[Path] = []
     for p in folder.iterdir():
         if not p.is_file():
@@ -42,6 +78,8 @@ def _auto_gallery_for_feature(repo_root: Path, feature_id: str) -> list[dict]:
         if p.name == "thumb.png":
             continue
         if p.name.startswith("page-"):
+            continue
+        if p.name in exclude_names:
             continue
         imgs.append(p)
 
@@ -69,8 +107,39 @@ def main() -> int:
             fid = f.get("id")
             if not isinstance(fid, str) or not fid.strip():
                 continue
+
+            # Headline image policy:
+            # - If assets/features/<id>/page-001.png exists, it ALWAYS becomes the headline
+            #   feature image + thumbnail (even if features.json specifies something else).
+            # - Otherwise, only promote a folder image if the feature is using the placeholder
+            #   (or missing), to keep existing curated images stable.
+            folder = repo_root / "assets" / "features" / fid
+            page001 = folder / "page-001.png"
+            force_primary = page001.exists() and page001.is_file()
+
+            primary = page001 if force_primary else _auto_primary_image_for_feature(repo_root, fid)
+            primary_rel = primary.relative_to(repo_root).as_posix() if primary else ""
+            if primary_rel:
+                thumb = f.get("thumb")
+                if force_primary or (not isinstance(thumb, str) or thumb.strip() in ("", PLACEHOLDER_IMG)):
+                    f["thumb"] = primary_rel
+
+                pages = f.get("pages")
+                if isinstance(pages, list) and pages and isinstance(pages[0], dict):
+                    img0 = pages[0].get("image")
+                    if force_primary or (not isinstance(img0, str) or img0.strip() in ("", PLACEHOLDER_IMG)):
+                        pages[0]["image"] = primary_rel
+                        pages[0].setdefault("width", 0)
+                        pages[0].setdefault("height", 0)
+                        pages[0].setdefault("pageNumber", 1)
+                        pages[0].setdefault("textPreview", "")
+                else:
+                    f["pages"] = [{"pageNumber": 1, "image": primary_rel, "width": 0, "height": 0, "textPreview": ""}]
+
             base_gallery = f.get("gallery") if isinstance(f.get("gallery"), list) else []
-            auto_gallery = _auto_gallery_for_feature(repo_root, fid)
+            # Avoid duplicating the primary image in the gallery thumbnail strip.
+            exclude = {primary.name} if primary else set()
+            auto_gallery = _auto_gallery_for_feature(repo_root, fid, exclude_names=exclude)
             # Merge + dedupe by url (stable).
             seen = set()
             merged = []
