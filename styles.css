@@ -69,8 +69,18 @@ body:not(.is-admin) .tag-pill__x{ display: none; }
   padding: 14px 18px;
   display:flex;
   align-items:center;
-  justify-content:space-between;
+  justify-content:flex-start;
   gap: 14px;
+}
+.brand{
+  display:flex;
+  align-items:center;
+  gap: 14px;
+}
+.brand__text{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .brand__kicker{
   font-size: 12px;
@@ -101,6 +111,17 @@ body:not(.is-admin) .tag-pill__x{ display: none; }
   padding-right: 2px;
   font-family: ui-serif, Georgia, "Times New Roman", Times, serif;
 }
+.topbar__actions{ display:flex; gap:10px; align-items:center; margin-left: auto; }
+.topbar__icon{
+  height: 38px; /* matches button height; won't grow the header */
+  width: 38px;
+  flex: 0 0 auto;
+  border-radius: 14px;
+  border: 1px solid rgba(32,52,44,.12);
+  background: rgba(255,255,255,.55);
+  object-fit: cover;
+  box-shadow: 0 10px 24px rgba(20,30,25,.10);
+}
 .brand__title::after{
   /* hand-drawn watercolor underline */
   content:"";
@@ -118,7 +139,16 @@ body:not(.is-admin) .tag-pill__x{ display: none; }
   opacity: .9;
   pointer-events: none;
 }
-.topbar__actions{ display:flex; gap:10px; }
+.brand__icon{
+  /* Deprecated: kept for backwards compatibility if any page still uses it. */
+  height: 38px;
+  width: 38px;
+  border-radius: 14px;
+  border: 1px solid rgba(32,52,44,.12);
+  background: rgba(255,255,255,.55);
+  object-fit: cover;
+  box-shadow: 0 10px 24px rgba(20,30,25,.10);
+}
 
 .btn{
   border: 1px solid rgba(192,107,59,.35);
@@ -1370,6 +1400,145 @@ mark{
   .content-featured--wide .card__img{
     min-height: 220px;
   }
+}
+
+
+/* ----------------------------
+   Wildflower footer
+   ---------------------------- */
+.site-footer{
+  /* Meadow strip sits above the footer (56px tall), so reserve space above it. */
+  margin-top: calc(56px + 18px);
+  padding: 42px 18px 42px;
+  position: relative;
+  /* Allow the meadow strip to sit ABOVE the footer (so the page background shows behind it). */
+  overflow: visible;
+  /* Keep the footer simple; the meadow is the "border". */
+  background: rgba(251,247,239,.82);
+  backdrop-filter: blur(8px);
+}
+.site-footer::before{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  /* Sit above the footer background so the SVG transparency reveals the page background. */
+  top:-56px;
+  height: 56px;
+  background:
+    url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27520%27%20height%3D%2756%27%20viewBox%3D%270%200%20520%2056%27%3E%0A%20%20%3Cpath%20d%3D%27M0%2040%20C%2090%2032%20130%2054%20220%2044%20S%20380%2034%20520%2044%20V56%20H0%20Z%27%20fill%3D%27rgba%28173%2C217%2C197%2C0.32%29%27%2F%3E%0A%20%20%3Cg%20stroke-linecap%3D%27round%27%20fill%3D%27none%27%20stroke%3D%27rgba%2832%2C52%2C44%2C0.22%29%27%20stroke-width%3D%272%27%3E%0A%20%20%20%20%3Cpath%20d%3D%27M35%2056%20C%2033%2044%2040%2034%2036%2022%27%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%27M110%2056%20C%20108%2046%20112%2038%20110%2026%27%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%27M175%2056%20C%20178%2044%20170%2036%20176%2024%27%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%27M250%2056%20C%20248%2046%20256%2040%20252%2028%27%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%27M320%2056%20C%20318%2044%20326%2038%20322%2022%27%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%27M395%2056%20C%20398%2044%20390%2036%20396%2024%27%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%27M470%2056%20C%20468%2046%20476%2040%20472%2028%27%2F%3E%0A%20%20%3C%2Fg%3E%0A%0A%20%20%3Cg%3E%0A%20%20%20%20%3Cg%20transform%3D%27translate%2836%2020%29%27%3E%0A%20%20%20%20%20%20%3Ccircle%20cx%3D%270%27%20cy%3D%270%27%20r%3D%277%27%20fill%3D%27rgba%28255%2C210%2C140%2C0.75%29%27%2F%3E%0A%20%20%20%20%20%20%3Ccircle%20cx%3D%27-6%27%20cy%3D%270%27%20r%3D%275%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.70%29%27%2F%3E%0A%20%20%20%20%20%20%3Ccircle%20cx%3D%276%27%20cy%3D%270%27%20r%3D%275%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.70%29%27%2F%3E%0A%20%20%20%20%20%20%3Ccircle%20cx%3D%270%27%20cy%3D%27-6%27%20r%3D%275%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.70%29%27%2F%3E%0A%20%20%20%20%20%20%3Ccircle%20cx%3D%270%27%20cy%3D%276%27%20r%3D%275%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.70%29%27%2F%3E%0A%20%20%20%20%20%20%3Ccircle%20cx%3D%270%27%20cy%3D%270%27%20r%3D%272.6%27%20fill%3D%27rgba%28192%2C107%2C59%2C0.70%29%27%2F%3E%0A%20%20%20%20%3C%2Fg%3E%0A%0A%20%20%20%20%3Cg%20transform%3D%27translate%28110%2026%29%27%3E%0A%20%20%20%20%20%20%3Ccircle%20cx%3D%270%27%20cy%3D%270%27%20r%3D%277%27%20fill%3D%27rgba%28173%2C217%2C197%2C0.55%29%27%2F%3E%0A%20%20%20%20%20%20%3Ccircle%20cx%3D%27-6%27%20cy%3D%270%27%20r%3D%275%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.62%29%27%2F%3E%0A%20%20%20%20%20%20%3Ccircle%20cx%3D%276%27%20cy%3D%270%27%20r%3D%275%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.62%29%27%2F%3E%0A%20%20%20%20%20%20%3Ccircle%20cx%3D%270%27%20cy%3D%27-6%27%20r%3D%275%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.62%29%27%2F%3E%0A%20%20%20%20%20%20%3Ccircle%20cx%3D%270%27%20cy%3D%276%27%20r%3D%275%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.62%29%27%2F%3E%0A%20%20%20%20%20%20%3Ccircle%20cx%3D%270%27%20cy%3D%270%27%20r%3D%272.6%27%20fill%3D%27rgba%2858%2C122%2C99%2C0.65%29%27%2F%3E%0A%20%20%20%20%3C%2Fg%3E%0A%0A%20%20%20%20%3Cg%20transform%3D%27translate%28176%2024%29%27%3E%0A%20%20%20%20%20%20%3Ccircle%20cx%3D%270%27%20cy%3D%270%27%20r%3D%277%27%20fill%3D%27rgba%28210%2C165%2C230%2C0.55%29%27%2F%3E%0A%20%20%20%20%20%20%3Ccircle%20cx%3D%27-6%27%20cy%3D%270%27%20r%3D%275%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.60%29%27%2F%3E%0A%20%20%20%20%20%20%3Ccircle%20cx%3D%276%27%20cy%3D%270%27%20r%3D%275%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.60%29%27%2F%3E%0A%20%20%20%20%20%20%3Ccircle%20cx%3D%270%27%20cy%3D%27-6%27%20r%3D%275%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.60%29%27%2F%3E%0A%20%20%20%20%20%20%3Ccircle%20cx%3D%270%27%20cy%3D%276%27%20r%3D%275%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.60%29%27%2F%3E%0A%20%20%20%20%20%20%3Ccircle%20cx%3D%270%27%20cy%3D%270%27%20r%3D%272.6%27%20fill%3D%27rgba%28120%2C80%2C150%2C0.65%29%27%2F%3E%0A%20%20%20%20%3C%2Fg%3E%0A%0A%20%20%20%20%3Cg%20transform%3D%27translate%28252%2028%29%27%3E%0A%20%20%20%20%20%20%3Ccircle%20cx%3D%270%27%20cy%3D%270%27%20r%3D%277%27%20fill%3D%27rgba%28255%2C210%2C140%2C0.70%29%27%2F%3E%0A%20%20%20%20%20%20%3Ccircle%20cx%3D%27-6%27%20cy%3D%270%27%20r%3D%275%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.66%29%27%2F%3E%0A%20%20%20%20%20%20%3Ccircle%20cx%3D%276%27%20cy%3D%270%27%20r%3D%275%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.66%29%27%2F%3E%0A%20%20%20%20%20%20%3Ccircle%20cx%3D%270%27%20cy%3D%27-6%27%20r%3D%275%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.66%29%27%2F%3E%0A%20%20%20%20%20%20%3Ccircle%20cx%3D%270%27%20cy%3D%276%27%20r%3D%275%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.66%29%27%2F%3E%0A%20%20%20%20%20%20%3Ccircle%20cx%3D%270%27%20cy%3D%270%27%20r%3D%272.6%27%20fill%3D%27rgba%28192%2C107%2C59%2C0.70%29%27%2F%3E%0A%20%20%20%20%3C%2Fg%3E%0A%0A%20%20%20%20%3Cg%20transform%3D%27translate%28322%2022%29%27%3E%0A%20%20%20%20%20%20%3Ccircle%20cx%3D%270%27%20cy%3D%270%27%20r%3D%277%27%20fill%3D%27rgba%28255%2C190%2C210%2C0.55%29%27%2F%3E%0A%20%20%20%20%20%20%3Ccircle%20cx%3D%27-6%27%20cy%3D%270%27%20r%3D%275%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.60%29%27%2F%3E%0A%20%20%20%20%20%20%3Ccircle%20cx%3D%276%27%20cy%3D%270%27%20r%3D%275%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.60%29%27%2F%3E%0A%20%20%20%20%20%20%3Ccircle%20cx%3D%270%27%20cy%3D%27-6%27%20r%3D%275%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.60%29%27%2F%3E%0A%20%20%20%20%20%20%3Ccircle%20cx%3D%270%27%20cy%3D%276%27%20r%3D%275%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.60%29%27%2F%3E%0A%20%20%20%20%20%20%3Ccircle%20cx%3D%270%27%20cy%3D%270%27%20r%3D%272.6%27%20fill%3D%27rgba%28160%2C80%2C110%2C0.60%29%27%2F%3E%0A%20%20%20%20%3C%2Fg%3E%0A%0A%20%20%20%20%3Cg%20transform%3D%27translate%28396%2024%29%27%3E%0A%20%20%20%20%20%20%3Ccircle%20cx%3D%270%27%20cy%3D%270%27%20r%3D%277%27%20fill%3D%27rgba%28173%2C217%2C197%2C0.55%29%27%2F%3E%0A%20%20%20%20%20%20%3Ccircle%20cx%3D%27-6%27%20cy%3D%270%27%20r%3D%275%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.62%29%27%2F%3E%0A%20%20%20%20%20%20%3Ccircle%20cx%3D%276%27%20cy%3D%270%27%20r%3D%275%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.62%29%27%2F%3E%0A%20%20%20%20%20%20%3Ccircle%20cx%3D%270%27%20cy%3D%27-6%27%20r%3D%275%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.62%29%27%2F%3E%0A%20%20%20%20%20%20%3Ccircle%20cx%3D%270%27%20cy%3D%276%27%20r%3D%275%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.62%29%27%2F%3E%0A%20%20%20%20%20%20%3Ccircle%20cx%3D%270%27%20cy%3D%270%27%20r%3D%272.6%27%20fill%3D%27rgba%2858%2C122%2C99%2C0.65%29%27%2F%3E%0A%20%20%20%20%3C%2Fg%3E%0A%0A%20%20%20%20%3Cg%20transform%3D%27translate%28472%2028%29%27%3E%0A%20%20%20%20%20%20%3Ccircle%20cx%3D%270%27%20cy%3D%270%27%20r%3D%277%27%20fill%3D%27rgba%28210%2C165%2C230%2C0.52%29%27%2F%3E%0A%20%20%20%20%20%20%3Ccircle%20cx%3D%27-6%27%20cy%3D%270%27%20r%3D%275%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.60%29%27%2F%3E%0A%20%20%20%20%20%20%3Ccircle%20cx%3D%276%27%20cy%3D%270%27%20r%3D%275%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.60%29%27%2F%3E%0A%20%20%20%20%20%20%3Ccircle%20cx%3D%270%27%20cy%3D%27-6%27%20r%3D%275%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.60%29%27%2F%3E%0A%20%20%20%20%20%20%3Ccircle%20cx%3D%270%27%20cy%3D%276%27%20r%3D%275%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.60%29%27%2F%3E%0A%20%20%20%20%20%20%3Ccircle%20cx%3D%270%27%20cy%3D%270%27%20r%3D%272.6%27%20fill%3D%27rgba%28120%2C80%2C150%2C0.65%29%27%2F%3E%0A%20%20%20%20%3C%2Fg%3E%0A%20%20%3C%2Fg%3E%0A%0A%20%20%3Cg%20opacity%3D%270.55%27%3E%0A%20%20%20%20%3Cpath%20d%3D%27M88%2016%20C%2094%2010%20104%2010%20110%2016%20C%20104%2022%2094%2022%2088%2016%20Z%27%20fill%3D%27rgba%28255%2C255%2C255%2C0.65%29%27%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%27M88%2016%20C%2096%2014%20102%2014%20110%2016%27%20stroke%3D%27rgba%2832%2C52%2C44%2C0.18%29%27%20stroke-width%3D%271%27%20fill%3D%27none%27%20stroke-linecap%3D%27round%27%2F%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E")
+    repeat-x top center;
+  opacity: .95;
+  filter: drop-shadow(0 8px 16px rgba(20,30,25,.08));
+  pointer-events:none;
+}
+.site-footer__inner{
+  max-width: 1200px;
+  margin: 0 auto;
+  display:grid;
+  grid-template-columns: 1.2fr .95fr 1fr;
+  gap: 14px 18px;
+  align-items: start;
+  position: relative;
+  z-index: 1;
+}
+.site-footer__brand{
+  display:flex;
+  gap: 12px;
+  align-items:flex-start;
+  min-width: 0;
+}
+.site-footer__sigil{
+  width: 44px;
+  height: 44px;
+  flex: 0 0 auto;
+  border-radius: 16px;
+  border: 1px solid rgba(32,52,44,.12);
+  background:
+    radial-gradient(circle at 30% 30%, rgba(255,255,255,.95), rgba(255,255,255,0) 55%),
+    radial-gradient(circle at 65% 70%, rgba(255,210,140,.85), rgba(192,107,59,.75));
+  box-shadow: 0 14px 28px rgba(20,30,25,.10);
+  position: relative;
+}
+.site-footer__sigil::after{
+  content:"";
+  position:absolute;
+  inset: 10px;
+  border-radius: 999px;
+  background:
+    radial-gradient(circle at 50% 35%, rgba(255,255,255,.95), rgba(255,255,255,0) 55%),
+    radial-gradient(circle at 50% 70%, rgba(173,217,197,.75), rgba(58,122,99,.85));
+  border: 1px solid rgba(58,122,99,.35);
+  transform: rotate(-10deg);
+  opacity: .95;
+}
+.site-footer__brandText{ min-width: 0; }
+.site-footer__title{
+  font-size: 16px;
+  letter-spacing: .01em;
+  margin-top: 2px;
+}
+.site-footer__tagline{
+  margin-top: 6px;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.35;
+}
+.site-footer__nav{
+  display:flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items:flex-start;
+  align-content:flex-start;
+  justify-content:flex-start;
+}
+.site-footer__link{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border-radius: 999px;
+  border: 1px solid rgba(32,52,44,.16);
+  background: rgba(255,255,255,.58);
+  padding: 7px 10px;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  line-height: 1;
+  color: rgba(32,52,44,.92);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.site-footer__link:hover{ transform: translateY(-1px); background: rgba(255,255,255,.72); }
+.site-footer__link:active{ transform: translateY(0); }
+.site-footer__link:focus-visible{
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(58,122,99,.14);
+  border-color: rgba(58,122,99,.45);
+}
+.site-footer__meta{
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  line-height: 1.35;
+  color: rgba(32,52,44,.92);
+}
+.site-footer__note + .site-footer__note{ margin-top: 6px; }
+.site-footer__contact{
+  color: rgba(32,52,44,.92);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(58,122,99,.45);
+}
+.site-footer__contact:hover{
+  text-decoration-color: rgba(192,107,59,.55);
+}
+.site-footer__contact:focus-visible{
+  outline: none;
+  border-radius: 8px;
+  box-shadow: 0 0 0 4px rgba(58,122,99,.14);
+}
+
+@media (max-width: 900px){
+  .site-footer__inner{ grid-template-columns: 1fr; }
 }
 
 
