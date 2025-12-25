@@ -801,6 +801,12 @@ body.is-admin .map-bottom-actions{
   box-shadow: 0 40px 80px rgba(10,20,15,.25);
   background: rgba(251,247,239,.95);
   overflow: hidden;
+  /* iOS/Safari: keep dialogs centered in the viewport even when the page is scrolled. */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
 }
 .modal::backdrop{
   background: rgba(20,30,25,.35);
@@ -1040,7 +1046,8 @@ mark{
 @media (max-width: 740px){
   .thumb{ width: 120px; }
   .thumb img{ height: 80px; }
-  .lightbox__stage{ height: clamp(240px, 54vh, 520px); }
+  /* Smaller stage on phones to reduce empty space around portrait boards/photos. */
+  .lightbox__stage{ height: clamp(200px, 42vh, 420px); }
   .lightbox__nav{ width: 38px; height: 38px; font-size: 20px; }
 }
 
@@ -1283,6 +1290,31 @@ code{ overflow-wrap: anywhere; word-break: break-word; }
   body.page-map .map-top-actions #btnRandom{ display: none; }
   body.page-map .map-bottom-actions{ display: none; }
   body.page-map .map-tags{ display: none; }
+
+  /* Mobile map should be just the map + Tour button. */
+  body.page-map .layout{
+    grid-template-columns: 1fr;
+    grid-template-areas: "hero";
+    padding: 12px 12px 18px;
+  }
+  body.page-map .sidebar{ display: none; }
+  body.page-map .content{ display: none; }
+  body.page-map .map-top-actions{
+    left: 12px;
+    top: 12px;
+    right: auto;
+  }
+
+  /* Pins: keep tappable dots, remove "tag-like" label bubbles. */
+  body.page-map .pin__label{ display: none; }
+  body.page-map .pin__stem{ display: none; }
+  body.page-map .pin__bubble{
+    padding: 0;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    backdrop-filter: none;
+  }
 }
 
 /* ----------------------------
