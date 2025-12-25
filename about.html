@@ -19,16 +19,26 @@
             <div class="brand__title">Wilding Portal</div>
           </div>
         </div>
-        <div class="topbar__actions">
+        <button
+          class="btn btn--ghost topbar__menuBtn"
+          id="navToggle"
+          type="button"
+          aria-label="Open menu"
+          aria-controls="topbarNav"
+          aria-expanded="false"
+        >
+          Menu
+        </button>
+        <nav class="topbar__actions" id="topbarNav" aria-label="Site">
           <a class="btn btn--ghost" href="./index.html">Back to map</a>
           <a class="btn btn--ghost" href="./field-guide.html">Living Dorset Field Guide</a>
           <a class="btn btn--ghost" href="./gallery.html">Gallery</a>
           <a class="btn btn--ghost" href="./content.html">Watch &amp; Read</a>
-        </div>
+        </nav>
       </div>
     </header>
 
-    <main class="layout" style="grid-template-columns: 1fr; grid-template-areas: 'content';">
+    <main class="layout layout--single">
       <section class="content" aria-label="About">
         <div class="about">
           <section class="about__section">
@@ -158,6 +168,7 @@
         </div>
       </div>
     </footer>
+    <script src="./nav.js"></script>
   </body>
 </html>
 

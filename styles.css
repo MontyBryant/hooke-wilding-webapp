@@ -116,6 +116,10 @@ body:not(.is-admin) .tag-pill__x{ display: none; }
   font-family: ui-serif, Georgia, "Times New Roman", Times, serif;
 }
 .topbar__actions{ display:flex; gap:10px; align-items:center; margin-left: auto; }
+.topbar__menuBtn{
+  display: none;
+  margin-left: auto;
+}
 .topbar__icon{
   height: 38px; /* matches button height; won't grow the header */
   width: 38px;
@@ -165,6 +169,11 @@ body:not(.is-admin) .tag-pill__x{ display: none; }
   cursor: pointer;
   box-shadow: var(--shadow2);
 }
+.btn:focus-visible{
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(58,122,99,.14), var(--shadow2);
+  border-color: rgba(58,122,99,.45);
+}
 .btn:hover{ transform: translateY(-1px); }
 .btn:active{ transform: translateY(0); }
 .btn--ghost{
@@ -203,6 +212,16 @@ body:not(.is-admin) .tag-pill__x{ display: none; }
     "hero hero"
     "sidebar content";
   gap: 16px;
+}
+.layout.layout--sidebar{
+  /* For pages without the map hero row (e.g. Gallery, Field Guide, Watch & Read). */
+  grid-template-columns: 360px 1fr;
+  grid-template-areas: "sidebar content";
+}
+.layout.layout--single{
+  /* For single-column pages (e.g. About). */
+  grid-template-columns: 1fr;
+  grid-template-areas: "content";
 }
 .hero{ grid-area: hero; }
 .sidebar{ grid-area: sidebar; }
@@ -1188,11 +1207,82 @@ mark{
       "sidebar"
       "content";
   }
+  .layout.layout--sidebar{
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "sidebar"
+      "content";
+  }
+  .layout.layout--single{
+    grid-template-columns: 1fr;
+    grid-template-areas: "content";
+  }
   .grid{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (max-width: 640px){
   .grid{ grid-template-columns: 1fr; }
   .hero__overlay{ left: 12px; right: 12px; bottom: 12px; max-width: unset; }
+}
+
+/* Mobile ergonomics */
+@media (max-width: 740px){
+  /* Mobile menu (hamburger/dropdown) */
+  .topbar__menuBtn{ display: inline-flex; }
+  .topbar__actions{ display: none; }
+  body.is-nav-open .topbar__inner{ flex-wrap: wrap; }
+  body.is-nav-open .topbar__actions{
+    display: flex;
+    width: 100%;
+    margin-left: 0;
+    padding-top: 10px;
+    padding-bottom: 2px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+  body.is-nav-open .topbar__actions .btn{
+    width: 100%;
+    justify-content: flex-start;
+    text-align: left;
+    padding: 12px 14px;
+    border-radius: 16px;
+    white-space: normal;
+  }
+
+  /* Reduce map pin label overflow on small screens. */
+  .pin__label{
+    max-width: 42vw;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* Dialog headers often overflow on narrow screens. */
+  .modal__header{ flex-wrap: wrap; }
+  .modal__headerActions{ flex-wrap: wrap; justify-content: flex-end; }
+}
+
+@media (max-width: 640px){
+  .content-date{ grid-template-columns: 1fr; }
+
+  /* Move map buttons away from the bottom overlay text (avoid overlap). */
+  .map-bottom-actions{
+    left: 14px;
+    right: auto;
+    bottom: auto;
+    top: 58px;
+    justify-content: flex-start;
+  }
+}
+
+/* Long URLs/filenames shouldn't force horizontal scroll on mobile. */
+code{ overflow-wrap: anywhere; word-break: break-word; }
+
+/* Map homepage simplification (mobile only) */
+@media (max-width: 740px){
+  body.page-map .hero__overlay{ display: none; }
+  body.page-map .map-top-actions #btnRandom{ display: none; }
+  body.page-map .map-bottom-actions{ display: none; }
+  body.page-map .map-tags{ display: none; }
 }
 
 /* ----------------------------
@@ -1394,6 +1484,7 @@ mark{
 
 @media (max-width: 640px){
   .gal-grid{ grid-template-columns: 1fr; }
+  .fg-modal__img{ height: 240px; }
 }
 
 /* ----------------------------

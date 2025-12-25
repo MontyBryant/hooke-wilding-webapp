@@ -12,7 +12,7 @@
     <link rel="apple-touch-icon" href="./assets/sunflower.webp" />
     <link rel="stylesheet" href="./styles.css" />
   </head>
-  <body>
+  <body class="page-map">
     <header class="topbar">
       <div class="topbar__inner">
         <img class="topbar__icon" src="./assets/sunflower.webp" alt="" aria-hidden="true" />
@@ -22,12 +22,22 @@
             <div class="brand__title">Wilding Portal</div>
           </div>
         </div>
-        <div class="topbar__actions">
+        <button
+          class="btn btn--ghost topbar__menuBtn"
+          id="navToggle"
+          type="button"
+          aria-label="Open menu"
+          aria-controls="topbarNav"
+          aria-expanded="false"
+        >
+          Menu
+        </button>
+        <nav class="topbar__actions" id="topbarNav" aria-label="Site">
           <a class="btn btn--ghost" href="./field-guide.html">Living Dorset Field Guide</a>
           <a class="btn btn--ghost" href="./gallery.html">Gallery</a>
           <a class="btn btn--ghost" href="./content.html">Watch &amp; Read</a>
           <a class="btn" id="btnAbout" href="./about.html">About</a>
-        </div>
+        </nav>
       </div>
     </header>
 
@@ -100,15 +110,17 @@
             <input id="search" class="input" type="search" placeholder="e.g. bees, stones, hibernaculum…" />
           </label>
 
-          <div class="divider"></div>
+          <div class="map-tags">
+            <div class="divider"></div>
 
-          <div class="panel__row">
-            <div class="panel__subtitle">Tags</div>
-            <button class="btn btn--small btn--ghost btn--faint" id="clearFilters" type="button" hidden>Clear</button>
+            <div class="panel__row">
+              <div class="panel__subtitle">Tags</div>
+              <button class="btn btn--small btn--ghost btn--faint" id="clearFilters" type="button" hidden>Clear</button>
+            </div>
+            <div class="taglist" id="tagList" role="list"></div>
+
+            <div class="divider"></div>
           </div>
-          <div class="taglist" id="tagList" role="list"></div>
-
-          <div class="divider"></div>
 
           <div class="panel__meta" id="resultMeta"></div>
         </div>
@@ -463,6 +475,7 @@
 
     <script src="./data/features-data.js"></script>
     <script src="./app.js"></script>
+    <script src="./nav.js"></script>
   </body>
 </html>
 
