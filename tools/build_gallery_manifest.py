@@ -20,6 +20,7 @@ from __future__ import annotations
 import datetime as _dt
 import os
 from pathlib import Path
+import json
 
 
 IMAGE_EXTS = {".png", ".jpg", ".jpeg", ".webp", ".gif", ".svg"}
@@ -29,31 +30,70 @@ def rel_posix(path: Path, root: Path) -> str:
     return path.relative_to(root).as_posix()
 
 
-def categorize(src: str) -> tuple[str, str]:
-    # returns (category, label)
+def _load_feature_titles(repo_root: Path) -> dict[str, str]:
+    """
+    Best-effort lookup from feature id -> feature title (for gallery tags).
+    """
+    src = repo_root / "data" / "features.json"
+    try:
+        data = json.loads(src.read_text(encoding="utf-8"))
+    except OSError:
+        return {}
+    except json.JSONDecodeError:
+        return {}
+
+    out: dict[str, str] = {}
+    features = data.get("features")
+    if not isinstance(features, list):
+        return {}
+    for f in features:
+        if not isinstance(f, dict):
+            continue
+        fid = f.get("id")
+        title = f.get("title")
+        if isinstance(fid, str) and fid.strip() and isinstance(title, str) and title.strip():
+            out[fid.strip()] = title.strip()
+    return out
+
+
+def categorize(src: str, feature_titles: dict[str, str]) -> tuple[str, str, list[str]]:
+    # returns (category, label, tags)
     base = src.split("/")[-1]
 
+    if src.startswith("assets/before/"):
+        return ("Before", os.path.splitext(base)[0], ["Before"])
     if src.startswith("assets/about/"):
-        return ("About", base)
+        return ("About", base, ["About"])
     if src == "assets/hooke-farm-watercolour.png":
-        return ("Artwork", "Hooke Farm watercolor map")
+        return ("Artwork", "Hooke Farm watercolor map", ["Artwork"])
     if src == "assets/sunflower.webp":
-        return ("Artwork", "Sunflower")
+        return ("Artwork", "Sunflower", ["Artwork"])
     if src.startswith("assets/hookewildingmisc/"):
-        return ("Hooke wilding misc", os.path.splitext(base)[0])
+        return ("Misc", os.path.splitext(base)[0], ["Misc"])
 
     if src.startswith("assets/features/"):
+        # assets/features/<featureId>/<file>
+        parts = src.split("/")
+        fid = parts[2] if len(parts) >= 3 else ""
+        title = feature_titles.get(fid, fid) if fid else ""
         if base == "thumb.png" or base.startswith("page-"):
-            return ("Info boards", base)
-        return ("Feature photos", os.path.splitext(base)[0])
+            tags = ["Info board"]
+            if title:
+                tags.append(title)
+            return ("Info boards", base, tags)
+        tags = ["Feature photo"]
+        if title:
+            tags.append(title)
+        return ("Feature photos", os.path.splitext(base)[0], tags)
 
-    return ("Other", os.path.splitext(base)[0])
+    return ("Other", os.path.splitext(base)[0], ["Other"])
 
 
 def main() -> int:
     repo_root = Path(__file__).resolve().parent.parent
     assets_dir = repo_root / "assets"
     out_file = repo_root / "data" / "gallery-manifest.js"
+    feature_titles = _load_feature_titles(repo_root)
 
     imgs: list[str] = []
     for p in assets_dir.rglob("*"):
@@ -70,20 +110,37 @@ def main() -> int:
 
     imgs = sorted(set(imgs))
 
-    # Stable ordering (requested): About, Hooke wilding misc, Feature photos, Info boards, Artwork, Other
+    # Stable ordering (requested): Before, About, Misc, Feature photos, Info boards, Artwork, Other
     order = {
-        "About": 1,
-        "Hooke wilding misc": 2,
-        "Feature photos": 3,
-        "Info boards": 4,
-        "Artwork": 5,
-        "Other": 6,
+        "Before": 1,
+        "About": 2,
+        "Misc": 3,
+        "Feature photos": 4,
+        "Info boards": 5,
+        "Artwork": 6,
+        "Other": 7,
     }
 
     entries = []
     for src in imgs:
-        category, label = categorize(src)
-        entries.append({"src": src, "category": category, "label": label})
+        category, label, tags = categorize(src, feature_titles)
+        try:
+            # There's no reliable "created" time cross-platform; use mtime as a sensible proxy.
+            st = (repo_root / src).stat()
+            mtime = int(st.st_mtime)
+        except OSError:
+            mtime = 0
+        created_iso = _dt.datetime.utcfromtimestamp(mtime).replace(microsecond=0).isoformat() + "Z" if mtime else ""
+        entries.append(
+            {
+                "src": src,
+                "category": category,
+                "label": label,
+                "tags": tags,
+                "createdMs": mtime * 1000,
+                "createdAt": created_iso,
+            }
+        )
 
     entries.sort(key=lambda e: (order.get(e["category"], 99), e["category"], e["src"]))
 
@@ -96,8 +153,9 @@ def main() -> int:
     out_lines.append(f'  generatedAt: "{ts}",')
     out_lines.append("  images: [")
     for e in entries:
+        tags_js = json.dumps(e["tags"], ensure_ascii=False)
         out_lines.append(
-            f'    {{ src: "{e["src"]}", category: "{e["category"]}", label: "{e["label"]}" }},'
+            f'    {{ src: "{e["src"]}", category: "{e["category"]}", label: "{e["label"]}", tags: {tags_js}, createdMs: {int(e["createdMs"])}, createdAt: "{e["createdAt"]}" }},'
         )
     out_lines.append("  ],")
     out_lines.append("};")

@@ -25,7 +25,11 @@
       },
       "story": "At first glance it looks like a tidy pile of sticks. But the Dead Hedge is really a busy apartment block disguised as a boundary.\n\nStep closer (politely). In the gaps and shadows, small lives rehearse their daily routines: hiding, hunting, nesting, nibbling, and not being eaten.\n\nIf you stay still for long enough, you’ll notice the hedge is never actually still. It’s a soft edge where the farm quietly says: “Yes, you can live here too.”",
       "text": "",
-      "tags": []
+      "tags": [
+        "Shelter",
+        "Insects",
+        "Birds"
+      ]
     },
     {
       "id": "fallen-tree",
@@ -50,7 +54,10 @@
       },
       "story": "The Fallen Tree has retired from standing up, and it’s never looked happier.\n\nWhere a trunk meets the ground, the whole plot thickens: fungi move in with quiet confidence, beetles arrive like tiny engineers, and birds turn up for the buffet.\n\nWilding has a sense of humour—what we call “fallen” is often the start of an entirely new career. This is a slow-motion feast, a shelter, and a nursery all at once.",
       "text": "",
-      "tags": []
+      "tags": [
+        "Shelter",
+        "Insects"
+      ]
     },
     {
       "id": "giant-chair",
@@ -75,7 +82,9 @@
       },
       "story": "Some landmarks are ancient standing stones. Some are giant chairs. Hooke Farm contains multitudes.\n\nThe Giant Chair is a polite invitation to do the most wilding-friendly thing possible: stop. Sit. Breathe. Look.\n\nFrom here you can watch the site behave like itself—flowers leaning, insects commuting, birds complaining, and grasses waving as if they’ve heard excellent gossip.",
       "text": "",
-      "tags": []
+      "tags": [
+        "Landmarks"
+      ]
     },
     {
       "id": "hen-henge",
@@ -100,7 +109,9 @@
       },
       "story": "Hen Henge sounds like something you’d stumble across in a myth, right after a mysterious fog and just before a life-changing cup of tea.\n\nIn reality, it’s a small reminder that wilding isn’t only serious science—it’s also joy, curiosity, and the occasional splendidly silly name.\n\nStand here for a moment. The best features don’t shout; they wink. And this one definitely winks.",
       "text": "",
-      "tags": []
+      "tags": [
+        "Landmarks"
+      ]
     },
     {
       "id": "ichthyosaurus",
@@ -125,7 +136,9 @@
       },
       "story": "Imagine Dorset when it was sea, and the sea was busy.\n\nIchthyosaurus is your doorway into deep time: a playful nudge that says, “Everything you’re standing on has stories older than trees.”\n\nTouch the idea more than the object. Let your mind swim backwards through layers—then come back to the present, where lichen writes its own slow, living script on stone.",
       "text": "",
-      "tags": []
+      "tags": [
+        "Geology"
+      ]
     },
     {
       "id": "green-roof",
@@ -150,7 +163,10 @@
       },
       "story": "Most roofs have one job: keep weather out. This one has two: keep weather out and invite wildlife in.\n\nThe Green Roof is a tiny meadow that decided to live on top of a building. It drinks sun, holds heat, and offers a miniature neighbourhood of crevices, stems, and shelter.\n\nIf you ever need proof that “built” and “wild” can be friends, this is it—quietly blooming above your head like it planned it all along.",
       "text": "",
-      "tags": []
+      "tags": [
+        "Plants",
+        "Pollinators"
+      ]
     },
     {
       "id": "barn-owl-box",
@@ -175,7 +191,10 @@
       },
       "story": "A Barn Owl Box is a promise with a hinge: if the habitat is right, the wild might accept the invitation.\n\nNothing about a barn owl is loud. You don’t get a grand entrance—just a hush, a pale shape, and suddenly the field is listening.\n\nSo this is a place to practice dusk-patience. Watch the edges. Let the evening arrive. And if you’re lucky, you’ll see the silent sentence of flight written across the air.",
       "text": "",
-      "tags": []
+      "tags": [
+        "Birds",
+        "Shelter"
+      ]
     },
     {
       "id": "monkey-puzzle",
@@ -200,7 +219,10 @@
       },
       "story": "The Monkey Puzzle doesn’t just sit in the landscape—it declares itself.\n\nIts branches look like they were designed by a whimsical architect who only had triangles and attitude. Birds treat it as a lookout tower; walkers treat it as a compass.\n\nIf you ever lose your bearings, find the spiky silhouette and reset. The tree is basically saying: “You are here. Now go notice everything.”",
       "text": "",
-      "tags": []
+      "tags": [
+        "Plants",
+        "Landmarks"
+      ]
     },
     {
       "id": "tree-lith",
@@ -225,7 +247,10 @@
       },
       "story": "Tree Lith is a small stage for big details.\n\nBark becomes a map. Lichen becomes handwriting. Moss becomes velvet. Stone becomes a sun-warmed seat for an insect that will never know it’s sitting on geology.\n\nThis is a place to swap speed for attention. The reward is that everything you thought was “background” becomes the main event.",
       "text": "",
-      "tags": []
+      "tags": [
+        "Geology",
+        "Plants"
+      ]
     },
     {
       "id": "toad-pond",
@@ -250,7 +275,10 @@
       },
       "story": "Toad Pond is the farm’s small mirror—reflecting sky, reeds, and whatever dares to move across the surface.\n\nIn spring it becomes a nursery; in summer, an airshow for dragonflies; in autumn, a quiet drinking place; in winter, a lesson in patience.\n\nIf you want to meet the shy residents, bring stillness. Water rewards the slow.",
       "text": "",
-      "tags": []
+      "tags": [
+        "Water",
+        "Amphibians & Reptiles"
+      ]
     },
     {
       "id": "old-mill-pond",
@@ -275,7 +303,10 @@
       },
       "story": "Old Mill Pond keeps its secrets in ripples.\n\nStand still and you’ll see the whole place rearrange itself: a shadow passes under the surface, reeds sway like they’re whispering, and birds patrol the edges with professional focus.\n\nIt’s a history-heavy kind of calm—water that remembers. Visit often and you’ll notice it never tells the same story twice.",
       "text": "",
-      "tags": []
+      "tags": [
+        "Water",
+        "Birds"
+      ]
     },
     {
       "id": "orchard",
@@ -300,7 +331,10 @@
       },
       "story": "The Orchard is where the farm quietly practices generosity.\n\nIn spring it throws confetti (blossom) for the bees. In summer it grows weight and sweetness. In autumn it lets the ground become a feast. In winter it stands back and shows you the architecture of branches.\n\nIt’s a place where food is never just for humans—and that’s exactly the point.",
       "text": "",
-      "tags": []
+      "tags": [
+        "Plants",
+        "Pollinators"
+      ]
     },
     {
       "id": "public-bridleway",
@@ -325,7 +359,9 @@
       },
       "story": "The Public Bridleway is a shared thread—human footsteps, hoof prints, and wild routes braided together.\n\nEdges are where stories happen: hedges hold nests, verges hold flowers, and cover holds creatures that would rather not be seen.\n\nWalk it like a guest, not an owner. If you keep your pace gentle, the bridleway will show you the busy life running alongside it.",
       "text": "",
-      "tags": []
+      "tags": [
+        "Paths"
+      ]
     },
     {
       "id": "wild-veg-garden",
@@ -350,7 +386,10 @@
       },
       "story": "The Wild Veg Garden is what happens when you stop insisting on perfection and start inviting allies.\n\nYes, there are vegetables. And yes, there are weeds. But the real magic is the conversation between them: flowers calling in pollinators, predators arriving to keep balance, compost turning yesterday into next month.\n\nIt’s a kitchen garden with a slightly untamed grin—growing food while quietly growing habitat too.",
       "text": "",
-      "tags": []
+      "tags": [
+        "Plants",
+        "Pollinators"
+      ]
     },
     {
       "id": "wildflower-meadow",
@@ -375,7 +414,10 @@
       },
       "story": "Wildflower Meadow doesn’t do stillness. It does shimmer.\n\nOn a good summer day the air is full of wings: bees commuting, butterflies zig-zagging, and grasses nodding like they’re keeping time.\n\nCome back in autumn and it turns into a library of seed heads. Come back in winter and it becomes sculpture. The meadow is always working—just at different speeds.",
       "text": "",
-      "tags": []
+      "tags": [
+        "Plants",
+        "Pollinators"
+      ]
     },
     {
       "id": "insect-homes",
@@ -400,7 +442,8 @@
       },
       "story": "This is where the tiniest residents get the best housing.\n\nInsect Homes are both practical and poetic: a handful of materials arranged so that beetles, bees, and other busy workers can shelter, breed, and quietly keep the whole place running.\n\nIf you want to feel hopeful, watch the entrances for a minute. The traffic tells you the ecosystem is clocking in for work.",
       "tags": [
-        "Insects"
+        "Insects",
+        "Shelter"
       ]
     },
     {
@@ -452,7 +495,8 @@
       },
       "story": "The Standing Stones are time travellers with excellent posture.\n\nThey’re modernly placed, but the story in the rock is ancient: Jurassic seas, retreating water, and limestone laid down layer by layer when Dorset had a very different job description.\n\nWalk around them slowly. The stones don’t move, but your perspective does—and that’s the trick.",
       "tags": [
-        "Geology"
+        "Geology",
+        "Landmarks"
       ]
     },
     {
@@ -478,8 +522,8 @@
       },
       "story": "This feature is a tiny soap opera in wooden real estate.\n\nBoxes were built with one tenant in mind, but wilding has a way of saying, “Nice plan—here’s what actually happened.” Bees moved in. Birds negotiated. Outcomes varied.\n\nThe lesson is simple: provide habitat and let nature handle the casting. The best stories are never fully scripted.",
       "tags": [
-        "Bees",
-        "Birds"
+        "Birds",
+        "Pollinators"
       ]
     },
     {
@@ -505,7 +549,8 @@
       },
       "story": "The Sweet Track is an idea that keeps getting reinvented: “How do we cross wet ground without fighting it?”\n\nNeolithic people built their answer out of timber. Hooke Farm built theirs out of sweet chestnut and oak. Different centuries, same problem-solving.\n\nWalk it and imagine the original track under your feet—then look up and notice how wilding turns a path into a place.",
       "tags": [
-        "History"
+        "History",
+        "Paths"
       ]
     },
     {
@@ -531,7 +576,8 @@
       },
       "story": "The Bat Egg is a story about ambition—and nature’s right to disagree.\n\nIt was built with care and imagination, and then the bats did what bats do: they inspected, they visited… and they chose other plans.\n\nNow it’s becoming something else: a ruin, a texture, a wildflower stage set. Wilding loves a second act.",
       "tags": [
-        "Bats"
+        "Mammals",
+        "Shelter"
       ]
     },
     {
@@ -557,7 +603,8 @@
       },
       "story": "The Hibernaculum is a five-star winter hotel for creatures who hate central heating.\n\nBuilt from logs and rocks and good intentions, it offers the kind of shelter that lets amphibians and reptiles make it through cold weather safely.\n\nIt’s not a feature you “see” so much as a feature you provide. And that’s the whole wilding point: you build the stage, then you let the actors arrive on their own timetable.",
       "tags": [
-        "Amphibians & Reptiles"
+        "Amphibians & Reptiles",
+        "Shelter"
       ]
     },
     {

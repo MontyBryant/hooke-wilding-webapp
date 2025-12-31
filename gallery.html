@@ -52,9 +52,25 @@
 
           <div class="divider"></div>
 
+          <div class="panel__subtitle">View</div>
+          <div class="taglist" id="galView" role="list"></div>
+
+          <div class="divider"></div>
+
           <label class="field">
             <span class="field__label">Search filenames</span>
             <input id="galSearch" class="input" type="search" placeholder="e.g. bat, hibernaculum, IMG_..." />
+          </label>
+
+          <div class="divider"></div>
+
+          <label class="field">
+            <span class="field__label">Sort</span>
+            <select id="galSort" class="input">
+              <option value="created_desc" selected>Newest first</option>
+              <option value="created_asc">Oldest first</option>
+              <option value="name_asc">Filename A → Z</option>
+            </select>
           </label>
 
           <div class="divider"></div>
@@ -64,6 +80,11 @@
             <button class="btn btn--small btn--ghost btn--faint" id="galClear" type="button" hidden>Clear</button>
           </div>
           <div class="taglist" id="galCats" role="list"></div>
+
+          <div class="divider"></div>
+
+          <div class="panel__subtitle">Tags</div>
+          <div class="taglist" id="galTags" role="list"></div>
 
           <div class="divider"></div>
 
@@ -114,13 +135,36 @@
         <button class="btn btn--ghost" id="galModalClose" type="button">Close</button>
       </div>
       <div class="modal__body">
-        <img class="board board--hero" id="galModalImg" alt="" loading="lazy" />
+        <div class="modal__media" aria-label="Gallery viewer">
+          <div class="lightbox" aria-label="Photo viewer">
+            <div class="lightbox__stage" id="galStage">
+              <img class="modal__mediaImg lightbox__img" id="galStageImg" alt="" loading="lazy" />
+              <button class="lightbox__nav lightbox__nav--prev" id="galPrev" type="button" aria-label="Previous image">
+                ‹
+              </button>
+              <button class="lightbox__nav lightbox__nav--next" id="galNext" type="button" aria-label="Next image">
+                ›
+              </button>
+            </div>
+          </div>
+          <div class="modal__mediaBar">
+            <div class="modal__mediaBarTop">
+              <div class="modal__mediaBarTitle">Gallery</div>
+              <div class="modal__mediaBarHint muted">
+                <span id="galCounter" aria-live="polite">—</span>
+                <span aria-hidden="true"> · </span>
+                Swipe/scroll thumbnails or use arrows.
+              </div>
+            </div>
+            <div class="gallery gallery--attached" id="galThumbs" aria-label="Thumbnails"></div>
+          </div>
+        </div>
         <div class="caption muted" id="galModalCap"></div>
       </div>
     </dialog>
 
-    <script src="./data/gallery-manifest.js?v=2025-12-24-photos"></script>
-    <script src="./gallery.js?v=2025-12-24-photos"></script>
+    <script src="./data/gallery-manifest.js?v=2025-12-31"></script>
+    <script src="./gallery.js?v=2025-12-31"></script>
     <script src="./nav.js"></script>
   </body>
 </html>
